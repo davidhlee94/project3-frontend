@@ -3,7 +3,7 @@
 const Create = () => {
 return(
     <div>
-        
+        This is create.
     </div>
 )
 }

@@ -1,7 +1,22 @@
 import './Details.css'
-import Accordion from 'react-bootstrap/Accordion';
+import Accordion from 'react-bootstrap/Accordion'
+import { useState, useEffect } from 'react'
+import { useParams } from 'react-router-dom'
+
 
 const Details = () => {
+    const [ nft, setNFT ] = useState(null)
+    const { id } = useParams()
+
+     async function displayDetails() {
+        const response = await fetch(`https://dbl-project-3-backend.herokuapp.com/nft/${id}`)
+        const data = await response.json()
+        setNFT(data)
+        console.log(data)
+    }
+    useEffect(() => {
+        displayDetails()
+    },[])
     return(
         <div className='main-container'>
             <div className='left-side'>
@@ -12,7 +27,7 @@ const Details = () => {
                     <p> &#8801; Description</p>
                 </div>
                 <div className='details-artist'>
-                    <p>By XYZ</p>
+                    <p>By {}</p>
                 </div> 
                 <div className='detail'>
                 <Accordion defaultActiveKey="0">

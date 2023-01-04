@@ -16,7 +16,7 @@
 .image{
     border: 1px solid black;
     margin: 10px 60px;
-    height: 31.4em;
+    height: 32em;
 }
 .details-description{
     border: 1px solid black;
@@ -56,4 +56,22 @@
 }
 .artist-name h1{
     margin: 0 10px;    
+}
+#dropdown-basic{
+    background-color: white;
+    color: black;
+    width: 39em;
+}
+.artist-accordion{
+    margin: 2em 0;
+}
+.details-button{
+    background-color: #2E8EEE;
+    border-radius: 10px;
+    height: 4em;
+}
+.nft{
+    max-width: 100%;
+    height: auto;
+    width: auto\9; /* ie8 */
 }

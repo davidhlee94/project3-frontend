@@ -1,0 +1,59 @@
+.main-container{
+    border: 1px solid black;
+    height: 80em;
+    margin: 5px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.left-side{
+    border: 1px solid black;
+    
+}
+.right-side{
+    border: 1px solid black;
+
+}
+.image{
+    border: 1px solid black;
+    margin: 10px 60px;
+    height: 31.4em;
+}
+.details-description{
+    border: 1px solid black;
+    margin: 10px 60px 0 ;
+    height: 3em;
+    text-align: left;
+}
+.details-description p{
+    margin-top: 10px;
+    margin-left: 1em;
+}
+.details-artist{
+    border: 1px solid black;
+    margin: 0 60px;
+    height: 3em;
+    text-align: left;
+}
+.details-artist p{
+    margin-top: 10px;
+    margin-left: 1em; 
+}
+.detail{
+    border: 1px solid black;
+    margin: 0 60px;
+    height: fit-content;
+    text-align: left;
+}
+.detail p{
+    margin: 1em; 
+}
+.artist-name{
+    border: 1px solid black;
+    text-align: left;
+}
+.artist-name p{
+    margin: 1em;    
+}
+.artist-name h1{
+    margin: 0 10px;    
+}

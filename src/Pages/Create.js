@@ -3,33 +3,37 @@ import { Link } from "react-router-dom";
 import "./Create.css";
 
 const Create = () => {
+  const URL = "https://dbl-project-3-backend.herokuapp.com/nft";
   const [nft, setNft] = useState([]);
   const [newForm, setNewForm] = useState({
-    username: "",
+    userName: "",
     assetName: "",
     image: "",
     price: "",
   });
 
-  const getNFT = async () => {
-    try {
-      const response = await fetch("/create");
-      const allNFT = await response.json();
-      setNft(allNFT);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+//   const getNFT = async () => {
+//     try {
+//       const response = await fetch(URL);
+//       const allNFT = await response.json();
+//       console.log(allNFT);
+//       setNft(allNFT);
+//     } catch (error) {
+//       console.log(error);
+//     }
+//   };
+//   console.log(nft);
 
   const createNFT = async (nftData) => {
     try {
-      await fetch("nft", {
+      await fetch(URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(nftData),
       });
+    //   getNFT();
     } catch (error) {
       console.log(error);
     }
@@ -43,7 +47,8 @@ const Create = () => {
     e.preventDefault();
     const currentState = { ...newForm };
     createNFT(currentState);
-    setNewForm({ username: "", assetName: "", image: "", price: "" });
+    setNewForm({ userName: "", assetName: "", image: "", price: "" });
+    console.log("submitted");
   };
 
   const loaded = () => {
@@ -53,7 +58,7 @@ const Create = () => {
           <h1>{nft.assetName}</h1>
           <img src={nft.image} alt={nft.assetName} />
           <h3>{nft.price}</h3>
-          <h3>{nft.username}</h3>
+          <h3>{nft.userName}</h3>
         </Link>
       </div>
     ));
@@ -63,61 +68,59 @@ const Create = () => {
     <div>NFT Loading...</div>;
   };
 
-  useEffect(() => {
-    getNFT();
-  }, []);
+//   useEffect(() => {
+//     getNFT();
+//   }, []);
 
   return (
     <div>
       <h2>Create an NFT below.</h2>
       <div className="input-form-container">
         <div className="input-title-container">
-          <p className="input-title">Username:</p>
-          <p className="input-title">NFT Name:</p>
-          <p className="input-title">Image URL:</p>
-          <p className="input-title">Price:</p>
         </div>
         <div className="form-container">
-          <form onSubmit={handleSubmit} />
-          <div className="username-container">
-            <input
-              type="text"
-              value={newForm.username}
-              name="username"
-              placeholder="Username"
-              onChange={handleChange}
-            />
-          </div>
-          <div className="assetName-container">
-            <input
-              type="text"
-              value={newForm.assetName}
-              name="assetName"
-              placeholder="NFT Name"
-              onChange={handleChange}
-            />
-          </div>
-          <div className="image-container">
-            <input
-              type="text"
-              value={newForm.image}
-              name="image"
-              placeholder="Image URL"
-              onChange={handleChange}
-            />
-          </div>
-          <div className="price-container">
-            <input
-              type="text"
-              value={newForm.price}
-              name="price"
-              placeholder="Price"
-              onChange={handleChange}
-            />
-            <input type="submit" value="Create NFT" />
-          </div>
+          <form onSubmit={handleSubmit}>
+            <div className="username-container">
+            <p className="input-title">Username:</p><input
+                type="text"
+                value={newForm.userName}
+                name="userName"
+                placeholder="Username"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="assetName-container">
+            <p className="input-title">NFT Name:</p><input
+                type="text"
+                value={newForm.assetName}
+                name="assetName"
+                placeholder="NFT Name"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="image-container">
+            <p className="input-title">Image URL:</p><input
+                type="text"
+                value={newForm.image}
+                name="image"
+                placeholder="Image URL"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="price-container">
+            <p className="input-title">Price:</p><input
+                type="text"
+                value={newForm.price}
+                name="price"
+                placeholder="Price"
+                onChange={handleChange}
+              />
+            </div>
+            <input type="submit" value="Create NFT" className="button" />
+          </form>
         </div>
       </div>
+      {nft && nft.length ? loaded() : loading()}
     </div>
   );
 };

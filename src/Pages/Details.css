@@ -27,7 +27,8 @@
 }
 .nft-price{
     font-weight: bolder;
-    text-align: left;
+    font-size: xx-large;
+    justify-content: left;
     padding-left: 10px;
 }
 .image{
@@ -75,8 +76,6 @@
     display: grid;
     grid-template-columns: 2fr 1fr;
     text-align: left;
-    justify-content: center;
-    align-items: center;
 }
 .artist-collection p{
     padding-top: 1em;
@@ -106,7 +105,7 @@
     color: white;
     border: none;
     width: 20em;
-    margin: 2em .5em;
+    margin: 2em 10px;
 }
 .nft{
     width: 100%;
@@ -133,9 +132,6 @@
 }
 .grid-label{
     padding: 1em;
-}
-.verification{
-    height: 30px;
 }
 span{
     color: black;

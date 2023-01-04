@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import Modal from 'react-bootstrap/Modal';
 import "./Create.css";
 
 const Create = () => {
@@ -11,18 +12,22 @@ const Create = () => {
     image: "",
     price: "",
   });
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
-//   const getNFT = async () => {
-//     try {
-//       const response = await fetch(URL);
-//       const allNFT = await response.json();
-//       console.log(allNFT);
-//       setNft(allNFT);
-//     } catch (error) {
-//       console.log(error);
-//     }
-//   };
-//   console.log(nft);
+
+  const getNFT = async () => {
+    try {
+      const response = await fetch(URL);
+      const allNFT = await response.json();
+      const lastNFT = await allNFT[allNFT.length-1]
+      setNft(lastNFT);
+    } catch (error) {
+        console.log(error);
+    }
+};
+console.log(nft)
 
   const createNFT = async (nftData) => {
     try {
@@ -33,7 +38,7 @@ const Create = () => {
         },
         body: JSON.stringify(nftData),
       });
-    //   getNFT();
+      getNFT();
     } catch (error) {
       console.log(error);
     }
@@ -52,7 +57,8 @@ const Create = () => {
   };
 
   const loaded = () => {
-    return nft.map((nft) => (
+    console.log(nft.assetName)
+    return (
       <div key={nft._id}>
         <Link to={`/${nft._id}`}>
           <h1>{nft.assetName}</h1>
@@ -61,16 +67,16 @@ const Create = () => {
           <h3>{nft.userName}</h3>
         </Link>
       </div>
-    ));
+    );
   };
 
   const loading = () => {
     <div>NFT Loading...</div>;
   };
 
-//   useEffect(() => {
-//     getNFT();
-//   }, []);
+  useEffect(() => {
+    getNFT();
+  }, []);
 
   return (
     <div>
@@ -116,11 +122,16 @@ const Create = () => {
                 onChange={handleChange}
               />
             </div>
-            <input type="submit" value="Create NFT" className="button" />
+            <input type="submit" value="Create NFT" className="button" onClick={handleShow}/>
+
+            <Modal show={show} onHide={handleClose}>
+                <h3>You have created {newForm.assetName}!</h3>
+                <img src={newForm.image} width="300" height="auto"/>
+            </Modal>
           </form>
         </div>
       </div>
-      {nft && nft.length ? loaded() : loading()}
+      {nft ? loaded() : loading()}
     </div>
   );
 };

@@ -132,9 +132,7 @@ const Create = () => {
               type="submit"
               value="Create NFT"
               className="button"
-              onClick={() => {
-                handleShow(trigger);
-              }}
+              onClick={handleShow(trigger)}
             />
             <Modal className="modal" show={show} onHide={handleClose}>
               <h1 className="modal-text">Congratulations!</h1>

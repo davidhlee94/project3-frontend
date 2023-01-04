@@ -58,6 +58,10 @@
     justify-content: center;
 }
 
+.nft-price, .nft-username{
+    font-size: 1em;
+}
+
 .modal{
     display: flex;
     justify-content: center;

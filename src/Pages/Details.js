@@ -1,4 +1,5 @@
 import './Details.css'
+import Spinner from 'react-bootstrap/Spinner';
 import Accordion from 'react-bootstrap/Accordion'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
@@ -17,22 +18,31 @@ const Details = () => {
     useEffect(() => {
         displayDetails()
     },[])
+    if(!nft){
+        return (
+            <>
+            <Spinner animation="border" role="status">
+                <span className="visually-hidden">Loading...</span>
+            </Spinner>
+            </>
+        )
+    }
     return(
         <div className='main-container'>
             <div className='left-side'>
                 <div className='image'>
-                    <img src='https://i.seadn.io/gcs/files/46cc3cd979a513230fd2f345164bc6af.png' key='image' className='nft'/>
+                    <img src={nft.image} key={nft.userName} className='nft'/>
                 </div>
                 <div className='details-description'>
                     <p> &#8801; Description</p>
                 </div>
                 <div className='details-artist'>
-                    <p>By {}</p>
+                    <p>By {nft.userName}</p>
                 </div> 
                 <div className='detail'>
                 <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header> &#8801; About XYZ</Accordion.Header>
+                    <Accordion.Header> &#8801; About {nft.assetName}</Accordion.Header>
                     <Accordion.Body>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -48,14 +58,14 @@ const Details = () => {
             </div>
             <div className='right-side'>
                 <div className='artist-name'>
-                    <p>Artist Name Example</p>
+                    <p>{nft.userName}</p>
                 </div>
                 <div className='artist-name'>
-                    <p>Artwork Title</p>
+                    <p>{nft.assetName}</p>
                 </div>
                 <div className='artist-name'>
                     <p>Current Price</p>
-                    <h1>25,000$</h1>
+                    <h1>{nft.price} &#xFF04;</h1>
                     <button className='details-button'>BUY NOW</button>
                 </div>
                 <div className='artist-accordion'>

@@ -30,7 +30,7 @@ const Footer = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
           </p>
-          <input></input>
+          <input placeholder="Your emaild address"></input>
           <button>Sign Up</button>
         </Col>
         <Col>
@@ -56,14 +56,10 @@ const Footer = () => {
       <Row className="footerBottom">
         <Col>
           <Container>
-            <Row>
+            <Row className="footerBottomText">
               <Col>
-                <h1>Image Place Holder</h1>
-                <h1>App Name Place Holder</h1>
-              </Col>
-            </Row>
-            <Row>
-              <Col>
+                {/* <h1>Image Place Holder</h1> */}
+                <h4>App Name Place Holder</h4>
                 <p>
                   Lorem ipsum is placeholder text commonly used in the graphic,
                   print, and publishing industries for previewing layouts and

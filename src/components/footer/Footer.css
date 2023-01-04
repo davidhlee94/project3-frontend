@@ -5,16 +5,11 @@ div {
     font-family: 'Rubik', sans-serif;
 }
 
+/* FOOTER TOP STYLES */
 .footerTop {
     border-bottom: 1px solid lightgrey;
     margin: 10px;
     padding: 15px;
-}
-
-.footerBottom {
-    border-bottom: 1px solid lightgrey;
-    padding: 15px;
-    margin: 10px;
 }
 
 .footerTopText {
@@ -36,6 +31,17 @@ div {
     background-color: #2081E2;
     color: white;
     font-family: 'Rubik', sans-serif;
+}
+
+/* FOOTER BOTTOM STYLES */
+.footerBottom {
+    border-bottom: 1px solid lightgrey;
+    padding: 15px;
+    margin: 10px;
+}
+
+.footerBottomText {
+    text-align: left;
 }
 
 /* FOOTER ICONS */

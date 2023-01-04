@@ -23,7 +23,7 @@ const HomeTable = ({ tableData }) => {
                   <tr
                     key={idx}
                     onClick={() => {
-                      window.location = `/details/${tableItem._id}`;
+                      window.location = `/nft/${tableItem._id}`;
                     }}
                   >
                     <td>

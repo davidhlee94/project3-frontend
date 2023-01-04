@@ -1,45 +1,52 @@
 .main-container{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     height: 80em;
     margin: 5px;
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 .left-side{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     
 }
 .right-side{
-    border: 1px solid black;
+    /* border: 1px solid black; */
 
 }
 .image{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 10px 60px;
     height: 32em;
 }
 .details-description{
-    border: 1px solid black;
+    border: 1px solid rgb(205, 204, 204);
     margin: 10px 60px 0 ;
     height: 3em;
     text-align: left;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 5px;
 }
 .details-description p{
     margin-top: 10px;
     margin-left: 1em;
 }
 .details-artist{
-    border: 1px solid black;
+    border: 1px solid rgb(205, 204, 204);
     margin: 0 60px;
     height: 3em;
     text-align: left;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 5px;
 }
 .details-artist p{
     margin-top: 10px;
     margin-left: 1em; 
+    
 }
 .detail{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 0 60px;
     height: fit-content;
     text-align: left;
@@ -48,7 +55,7 @@
     margin: 1em; 
 }
 .artist-name{
-    border: 1px solid black;
+    /* border: 1px solid black; */
     text-align: left;
 }
 .artist-name p{
@@ -74,4 +81,8 @@
     max-width: 100%;
     height: auto;
     width: auto\9; /* ie8 */
+}
+.accordion-button{
+    font-size: 20px;
+    font-weight: bolder;
 }

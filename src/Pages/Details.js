@@ -9,7 +9,7 @@ const Details = () => {
                     <img src='https://i.seadn.io/gcs/files/46cc3cd979a513230fd2f345164bc6af.png' key='image' className='nft'/>
                 </div>
                 <div className='details-description'>
-                    <p>Description</p>
+                    <p> &#8801; Description</p>
                 </div>
                 <div className='details-artist'>
                     <p>By XYZ</p>
@@ -17,7 +17,7 @@ const Details = () => {
                 <div className='detail'>
                 <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0">
-                    <Accordion.Header>About XYZ</Accordion.Header>
+                    <Accordion.Header> &#8801; About XYZ</Accordion.Header>
                     <Accordion.Body>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -46,7 +46,7 @@ const Details = () => {
                 <div className='artist-accordion'>
                     <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header>Price History</Accordion.Header>
+                        <Accordion.Header>&#x24; Price History</Accordion.Header>
                         <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -62,7 +62,7 @@ const Details = () => {
                 <div className='artist-accordion'>
                     <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header>Listings</Accordion.Header>
+                        <Accordion.Header>&#x270E; Listings</Accordion.Header>
                         <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -78,7 +78,7 @@ const Details = () => {
                 <div className='artist-accordion'>
                     <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
-                        <Accordion.Header>Item Activity</Accordion.Header>
+                        <Accordion.Header> &#x279A; Item Activity</Accordion.Header>
                         <Accordion.Body>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad

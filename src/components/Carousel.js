@@ -1,25 +1,11 @@
-import { useState, useEffect } from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import Card from "react-bootstrap/Card";
+import Container from "react-bootstrap/Container";
 
-const HomeCarousel = () => {
-  const [carouselData, setCarouselData] = useState([]);
-  async function getCarouselData() {
-    let response = await fetch(
-      "https://dbl-project-3-backend.herokuapp.com/nft"
-    );
-    let data = await response.json();
-    // console.log(data);
-    setCarouselData(data);
-  }
-  useEffect(() => {
-    getCarouselData();
-  }, []);
-  console.log("Data State", carouselData);
+const HomeCarousel = ({ carouselData }) => {
   const responsive = {
     superLargeDesktop: {
-      // the naming can be any, depends on you.
       breakpoint: { max: 4000, min: 3000 },
       items: 5,
     },
@@ -37,10 +23,10 @@ const HomeCarousel = () => {
     },
   };
   return (
-    <div>
+    <Container>
       <Carousel
         responsive={responsive}
-        arrows={true}
+        // arrows={true}
         // centerMode={true}
         itemClass="carousel-item-padding-40-px"
         focusOnSelect={true}
@@ -68,7 +54,7 @@ const HomeCarousel = () => {
           <p>Loading...</p>
         )}
       </Carousel>
-    </div>
+    </Container>
   );
 };
 

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import Modal from 'react-bootstrap/Modal';
+import Modal from "react-bootstrap/Modal";
 import "./Create.css";
 
 const Create = () => {
@@ -15,19 +15,18 @@ const Create = () => {
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-
+  const [trigger, setTrigger] = useState(false);
 
   const getNFT = async () => {
     try {
       const response = await fetch(URL);
       const allNFT = await response.json();
-      const lastNFT = await allNFT[allNFT.length-1]
+      const lastNFT = await allNFT[allNFT.length - 1];
       setNft(lastNFT);
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-};
-console.log(nft)
+  };
 
   const createNFT = async (nftData) => {
     try {
@@ -57,14 +56,16 @@ console.log(nft)
   };
 
   const loaded = () => {
-    console.log(nft.assetName)
+    console.log(nft.assetName);
     return (
-      <div key={nft._id}>
-        <Link to={`/${nft._id}`}>
-          <h1>{nft.assetName}</h1>
-          <img src={nft.image} alt={nft.assetName} />
-          <h3>{nft.price}</h3>
-          <h3>{nft.userName}</h3>
+      <div key={nft._id} className="nft-id">
+        <Link to={`/${nft._id}`} className="nft-link">
+          <h1 className="nft-name">NFT Name: {nft.assetName}</h1>
+          <div className="nft-image-container">
+            <img className="nft-image" src={nft.image} alt={nft.assetName} />
+          </div>
+          <h3 className="nft-price">Price: {nft.price}</h3>
+          <h3 className="nft-username">Username: {nft.userName}</h3>
         </Link>
       </div>
     );
@@ -75,19 +76,21 @@ console.log(nft)
   };
 
   useEffect(() => {
-    getNFT();
+    if (setTrigger(true)) {
+      getNFT();
+    }
   }, []);
 
   return (
     <div>
       <h2>Create an NFT below.</h2>
       <div className="input-form-container">
-        <div className="input-title-container">
-        </div>
+        <div className="input-title-container"></div>
         <div className="form-container">
           <form onSubmit={handleSubmit}>
             <div className="username-container">
-            <p className="input-title">Username:</p><input
+              <p className="input-title">Username:</p>
+              <input
                 type="text"
                 value={newForm.userName}
                 name="userName"
@@ -96,7 +99,8 @@ console.log(nft)
               />
             </div>
             <div className="assetName-container">
-            <p className="input-title">NFT Name:</p><input
+              <p className="input-title">NFT Name:</p>
+              <input
                 type="text"
                 value={newForm.assetName}
                 name="assetName"
@@ -105,7 +109,8 @@ console.log(nft)
               />
             </div>
             <div className="image-container">
-            <p className="input-title">Image URL:</p><input
+              <p className="input-title">Image URL:</p>
+              <input
                 type="text"
                 value={newForm.image}
                 name="image"
@@ -114,7 +119,8 @@ console.log(nft)
               />
             </div>
             <div className="price-container">
-            <p className="input-title">Price:</p><input
+              <p className="input-title">Price:</p>
+              <input
                 type="text"
                 value={newForm.price}
                 name="price"
@@ -122,16 +128,22 @@ console.log(nft)
                 onChange={handleChange}
               />
             </div>
-            <input type="submit" value="Create NFT" className="button" onClick={handleShow}/>
-
-            <Modal show={show} onHide={handleClose}>
-                <h3>You have created {newForm.assetName}!</h3>
-                <img src={newForm.image} width="300" height="auto"/>
+            <input
+              type="submit"
+              value="Create NFT"
+              className="button"
+              onClick={() => {
+                handleShow(trigger);
+              }}
+            />
+            <Modal className="modal" show={show} onHide={handleClose}>
+              <h1 className="modal-text">Congratulations!</h1>
+              <h1 className="modal-text">You've just created an NFT!</h1>
+              {nft ? loaded() : loading()}
             </Modal>
           </form>
         </div>
       </div>
-      {nft ? loaded() : loading()}
     </div>
   );
 };

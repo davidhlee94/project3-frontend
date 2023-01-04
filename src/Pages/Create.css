@@ -37,3 +37,35 @@
 .button{
     margin-top: 1em;
 }
+
+.nft-link{
+    text-decoration: none;
+}
+
+.nft-name{
+    font-size: 2em;
+}
+
+.nft-name, .nft-image-container, .nft-price, .nft-username{
+    display: flex;
+    justify-content: center;
+}
+
+.nft-image{
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.modal{
+    display: flex;
+    justify-content: center;
+}
+
+.modal-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}

@@ -16,7 +16,7 @@
 .image{
     margin: 10px 60px;
     height: auto;
-    max-height: 50em;
+    max-height: 55em;
 }
 .details-description{
     border: 1px solid rgb(205, 204, 204);
@@ -80,7 +80,9 @@
 .nft{
     width: 100%;
     height: auto;
-    max-height: 50em;
+    max-height: 55em;
+    min-height: 450px;
+    min-width: 450px;
 }
 .accordion-button{
     font-size: 20px; 

@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+
+div {
+    font-family: 'Rubik', sans-serif;
+}
+
+.footerTop {
+    border-bottom: 1px solid lightgrey;
+    margin: 10px;
+    padding: 15px;
+}
+
+.footerBottom {
+    border-bottom: 1px solid lightgrey;
+    padding: 15px;
+    margin: 10px;
+}
+
+.footerTopText {
+    text-align: left;
+}
+
+.footerTopText input {
+    width: 300px;
+    height: 40px;
+    border-radius: 8px;
+}
+
+.footerTopText button {
+    width: 100px;
+    height: 40px;
+    margin: 0 10px 0 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2081E2;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* FOOTER ICONS */
+.footerIcon {
+    font-size: 3rem;
+    color: white;
+    padding: 16px;
+}
+
+.footerIcon:hover {
+    filter: opacity(.8);
+    font-size: 3.2rem;
+}
+
+/* FOOTER LINKS FOR EACH PERSON */
+.footerLink {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.footerLink:hover {
+    border-bottom: 1px solid white;
+    color: whitesmoke;
+    font-size: 1.15rem;
+}

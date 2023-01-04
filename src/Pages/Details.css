@@ -14,9 +14,9 @@
 
 }
 .image{
-    /* border: 1px solid black; */
     margin: 10px 60px;
-    height: 32em;
+    height: auto;
+    max-height: 50em;
 }
 .details-description{
     border: 1px solid rgb(205, 204, 204);
@@ -78,11 +78,11 @@
     height: 4em;
 }
 .nft{
-    max-width: 100%;
+    width: 100%;
     height: auto;
-    width: auto\9; /* ie8 */
+    max-height: 50em;
 }
 .accordion-button{
-    font-size: 20px;
+    font-size: 20px; 
     font-weight: bolder;
 }

@@ -9,7 +9,7 @@ const HomeTable = ({ tableData }) => {
       <h1 style={{ textAlign: "left" }}>Trending</h1>
       <Row>
         <Col>
-          <Table hover={true}>
+          <Table hover={true} responsive>
             <thead>
               <tr>
                 <th>#</th>
@@ -45,7 +45,7 @@ const HomeTable = ({ tableData }) => {
             </tbody>
           </Table>
         </Col>
-        <Col>Table Overflow</Col>
+        {/* <Col>Table Overflow</Col> */}
       </Row>
     </Container>
   );

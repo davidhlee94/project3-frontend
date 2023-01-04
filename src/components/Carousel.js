@@ -24,13 +24,7 @@ const HomeCarousel = ({ carouselData }) => {
   };
   return (
     <Container>
-      <Carousel
-        responsive={responsive}
-        // arrows={true}
-        // centerMode={true}
-        itemClass="carousel-item-padding-40-px"
-        focusOnSelect={true}
-      >
+      <Carousel responsive={responsive} focusOnSelect={true}>
         {carouselData !== [] ? (
           carouselData.map((item, idx) => {
             return (

@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 .main-container{
     /* border: 1px solid black; */
     height: 80em;
@@ -5,13 +7,28 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
-.left-side{
-    /* border: 1px solid black; */
+.price-panel{
+    border: 1px solid rgb(205, 204, 204);
+    border-radius: .5em;
     
 }
-.right-side{
-    /* border: 1px solid black; */
-
+.date-created{
+    border: 1px solid rgb(205, 204, 204, .5);
+    border-radius: .5em .5em 0 0;
+    padding: 10px;
+    text-align: left;
+    padding-left: 10px;
+}
+.current-price{
+    color: grey;
+    padding: 1em 0 0 0;
+    text-align: left;
+    padding-left: 10px;
+}
+.nft-price{
+    font-weight: bolder;
+    text-align: left;
+    padding-left: 10px;
 }
 .image{
     margin: 10px 60px;
@@ -42,8 +59,7 @@
 }
 .details-artist p{
     margin-top: 10px;
-    margin-left: 1em; 
-    
+    margin-left: 1em;
 }
 .detail{
     /* border: 1px solid black; */
@@ -54,16 +70,27 @@
 .detail p{
     margin: 1em; 
 }
-.artist-name{
+.artist-collection {
     /* border: 1px solid black; */
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: left;
+    justify-content: center;
+    align-items: center;
+}
+.artist-collection p{
+    padding-top: 1em;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: bolder;
+    color: #2E8EEE;
+}
+.asset-name{
+    font-family: 'Source Sans Pro', sans-serif;
+    font-size: 50px;
+    font-weight: bolder;
     text-align: left;
 }
-.artist-name p{
-    margin: 1em;    
-}
-.artist-name h1{
-    margin: 0 10px;    
-}
+
 #dropdown-basic{
     background-color: white;
     color: black;
@@ -76,6 +103,10 @@
     background-color: #2E8EEE;
     border-radius: 10px;
     height: 4em;
+    color: white;
+    border: none;
+    width: 20em;
+    margin: 2em .5em;
 }
 .nft{
     width: 100%;
@@ -87,4 +118,25 @@
 .accordion-button{
     font-size: 20px; 
     font-weight: bolder;
+}
+
+.listing-price-labels{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+.grid-button{
+    background-color: #2E8EEE;
+    border-radius: 10px;
+    border: none;
+    color: white;
+
+}
+.grid-label{
+    padding: 1em;
+}
+.verification{
+    height: 30px;
+}
+span{
+    color: black;
 }

@@ -1,0 +1,75 @@
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form-container {
+  display: flex;
+  justify-content: center;
+}
+
+.input-title {
+  margin: 0;
+  padding: 0.5em;
+  height: 25%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.input-title-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.username-container,
+.assetName-container,
+.image-container,
+.price-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  padding: 0.5em;
+}
+
+.button{
+    margin-top: 1em;
+}
+
+.nft-link{
+    text-decoration: none;
+}
+
+.nft-name{
+    font-size: 2em;
+}
+
+.nft-name, .nft-image-container, .nft-price, .nft-username{
+    display: flex;
+    justify-content: center;
+}
+
+.nft-image{
+    width: 400px;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nft-price, .nft-username{
+    font-size: 1em;
+}
+
+.modal{
+    display: flex;
+    justify-content: center;
+}
+
+.modal-text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+}

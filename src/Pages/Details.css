@@ -136,3 +136,17 @@
 span{
     color: black;
 }
+#icon{
+    color:  grey;
+    font-size: xx-large;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    text-decoration: none;
+}
+#tooltip{
+    position: absolute;
+    top: 15%;
+    background-color: #000;
+    color: #fff;
+}

@@ -3,6 +3,8 @@ import Spinner from 'react-bootstrap/Spinner';
 import Accordion from 'react-bootstrap/Accordion'
 import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
+import { Tooltip } from 'react-tooltip';
+import 'react-tooltip/dist/react-tooltip.css'
 
 
 const Details = () => {
@@ -62,7 +64,10 @@ const Details = () => {
                 </div>
                 <div className='artist-collection'>
                     <p><span>Created by</span> {nft.userName}</p>
-                    <p>icon here</p>
+                    <div>
+                        <a href={`${nft.image}`}id='icon'>&#x274F;</a>
+                        <Tooltip anchorId="icon" content="Full Image" />
+                    </div>
                 </div>
                 <div className='price-panel'>
                     <div className='date-created'>

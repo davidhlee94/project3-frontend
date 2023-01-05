@@ -4,22 +4,22 @@ import Select from "react-select";
 import "./Collection.css";
 
 const Collection = () => {
-  const URL = "https://dbl-project-3-backend.herokuapp.com/nft";
+  const URL1 = "https://dbl-project-3-backend.herokuapp.com/nft";
   const [nft, setNft] = useState([]);
   const [newForm, setNewForm] = useState({
     collectionName: "",
-    assets: [],
+    assets: "",
   });
 
   const options = [];
 
   nft.forEach((item) => {
-    options.push({ value: item.assetName, label: item.assetName });
+    options.push({ value: item._id, label: item.assetName });
   });
 
   const getNFT = async () => {
     try {
-      const response = await fetch(URL);
+      const response = await fetch(URL1);
       const allNFT = await response.json();
       setNft(allNFT);
     } catch (error) {
@@ -27,9 +27,11 @@ const Collection = () => {
     }
   };
 
+  const URL2 = "http://localhost:4000/collection";
+
   const createCollection = async (collectionData) => {
     try {
-      await fetch("/collection", {
+      await fetch(URL2, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,12 +44,14 @@ const Collection = () => {
   };
 
   const handleChange = (e) => {
+    console.log(e.target.value)
     setNewForm({ ...newForm, [e.target.name]: e.target.value });
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     const currentState = { ...newForm };
+    console.log(currentState);
     createCollection(currentState);
     setNewForm({ collectionName: "", assets: [] });
   };
@@ -86,13 +90,15 @@ const Collection = () => {
             onChange={handleChange}
           />
           <Select
+          isMulti
+            type="text"
             options={options}
             name="assets"
-            className="selection-options"
-            placeholder="Select your assets"
-            value={newForm.assets}
+            className="basic-multi-select"
+            classNamePrefix="select"
             onChange={handleChange}
-          ></Select>
+            value={newForm.assets}
+          ><option>hello</option></Select>
           <input type="submit" value="Create collection" />
         </form>
       </div>

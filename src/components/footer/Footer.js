@@ -124,14 +124,6 @@ const Footer = () => {
           </a>
         </Col>
       </Row>
-      {/* <Row>
-        <Col>
-          <p>2023</p>
-        </Col>
-        <Col>
-          <p>Privacy Policy Terms of Service</p>
-        </Col>
-      </Row> */}
     </Container>
   );
 };

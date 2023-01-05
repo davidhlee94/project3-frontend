@@ -73,7 +73,7 @@ const Details = () => {
                 </div>
                 <div className='price-panel'>
                     <div className='date-created'>
-                    <span>&#x263C; Created at</span> {nft.createdAt.slice(0,10)}
+                    <span>&#x263C; Created </span> {nft.createdAt.slice(0,10)}
                     </div>
                     <p className='current-price'>Current Price</p>
                     <h1 className='nft-price'>{nft.price}$</h1>

@@ -108,6 +108,7 @@
     max-height: 52em;
     min-height: 450px;
     min-width: 450px;
+    border-radius: 10px;
 }
 .image{
     border: 2px solid rgb(205, 204, 204);
@@ -137,6 +138,7 @@
 }
 span{
     color: black;
+    font-weight: bolder;
 }
 #icon{
     color:  grey;

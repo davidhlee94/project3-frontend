@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
+
+
+div {
+    font-family: 'Rubik', sans-serif;
+}
+
+/* FOOTER TOP STYLES */
+.footerTop {
+    border-bottom: 1px solid #508AC5;
+    margin: 10px;
+    padding: 15px;
+}
+
+.footerTopText {
+    text-align: left;
+}
+
+.footerTopText input {
+    width: 400px;
+    height: 50px;
+    border-radius: 8px;
+}
+
+.footerTopText button {
+    width: 120px;
+    height: 50px;
+    margin: 0 10px 0 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #2081E2;
+    color: white;
+    font-family: 'Rubik', sans-serif;
+}
+
+/* FOOTER BOTTOM STYLES */
+.footerBottom {
+    border-bottom: 1px solid #508AC5;
+    padding: 15px;
+    margin: 10px;
+}
+
+.footerBottomText {
+    text-align: left;
+}
+
+/* FOOTER ICONS */
+.footerIcon {
+    height: 2rem;
+    width: 2rem;
+    border-radius: 8px;
+    background-color: #2081E2;
+    font-size: 1rem;
+    color: white;
+    padding: 16px;
+    margin: 5px;
+}
+
+.footerIcon:hover {
+    transition: .3;
+    filter: opacity(.8);
+    /* font-size: 2.2rem; */
+}
+
+/* FOOTER LINKS FOR EACH PERSON */
+.footerLink {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.footerLink:hover {
+    transition: .3;
+    border-bottom: 1px solid white;
+    color: whitesmoke;
+    font-size: 1.15rem;
+}

@@ -56,7 +56,6 @@ const Create = () => {
   };
 
   const loaded = () => {
-    console.log(nft.assetName);
     return (
       <div key={nft._id} className="nft-id">
         <Link to={`/${nft._id}`} className="nft-link">
@@ -132,7 +131,9 @@ const Create = () => {
               type="submit"
               value="Create NFT"
               className="button"
-              onClick={handleShow(trigger)}
+              onClick={() => {
+                handleShow(trigger);
+              }}
             />
             <Modal className="modal" show={show} onHide={handleClose}>
               <h1 className="modal-text">Congratulations!</h1>

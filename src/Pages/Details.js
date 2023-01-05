@@ -5,7 +5,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css'
-
+import Barchart from '../components/Barchart';
 
 const Details = () => {
     const [ nft, setNFT ] = useState(null)
@@ -84,7 +84,7 @@ const Details = () => {
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>&#x24; Price History</Accordion.Header>
                         <Accordion.Body>
-                        
+                            <Barchart created={nft.createdAt.slice(0,10)} price={nft.price}/>
                         </Accordion.Body>
                     </Accordion.Item>
                     </Accordion>    

@@ -11,12 +11,11 @@ const Collection = () => {
     assets: [],
   });
 
-  const options = [
-    {
-      value: nft.map((nft) => <div key={nft._id}>{nft.assetName}</div>),
-      label: nft.map((nft) => <div key={nft._id}>{nft.assetName}</div>),
-    },
-  ];
+  const options = [];
+
+  nft.forEach((item) => {
+    options.push({ value: item.assetName, label: item.assetName });
+  });
 
   const getNFT = async () => {
     try {
@@ -83,7 +82,7 @@ const Collection = () => {
             type="text"
             value={newForm.collectionName}
             name="collectionName"
-            placeholder="name"
+            placeholder="Collection Name"
             onChange={handleChange}
           />
           <Select

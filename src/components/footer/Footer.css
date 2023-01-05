@@ -7,7 +7,7 @@ div {
 
 /* FOOTER TOP STYLES */
 .footerTop {
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #508AC5;
     margin: 10px;
     padding: 15px;
 }
@@ -17,14 +17,14 @@ div {
 }
 
 .footerTopText input {
-    width: 300px;
-    height: 40px;
+    width: 400px;
+    height: 50px;
     border-radius: 8px;
 }
 
 .footerTopText button {
-    width: 100px;
-    height: 40px;
+    width: 120px;
+    height: 50px;
     margin: 0 10px 0 10px;
     border-radius: 8px;
     border: none;
@@ -35,7 +35,7 @@ div {
 
 /* FOOTER BOTTOM STYLES */
 .footerBottom {
-    border-bottom: 1px solid lightgrey;
+    border-bottom: 1px solid #508AC5;
     padding: 15px;
     margin: 10px;
 }
@@ -46,14 +46,20 @@ div {
 
 /* FOOTER ICONS */
 .footerIcon {
-    font-size: 3rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 8px;
+    background-color: #2081E2;
+    font-size: 1rem;
     color: white;
     padding: 16px;
+    margin: 5px;
 }
 
 .footerIcon:hover {
+    transition: .3;
     filter: opacity(.8);
-    font-size: 3.2rem;
+    /* font-size: 2.2rem; */
 }
 
 /* FOOTER LINKS FOR EACH PERSON */
@@ -64,6 +70,7 @@ div {
 }
 
 .footerLink:hover {
+    transition: .3;
     border-bottom: 1px solid white;
     color: whitesmoke;
     font-size: 1.15rem;

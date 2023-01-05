@@ -14,7 +14,7 @@ const Footer = () => {
   const tsContainer = {
     backgroundColor: "rgb(24,104,183)",
     width: "100vw",
-    height: "650px",
+    height: "500px",
     paddingTop: "40px",
     paddingLeft: "30px",
     paddingRight: "30px",
@@ -59,7 +59,7 @@ const Footer = () => {
             <Row className="footerBottomText">
               <Col>
                 {/* <h1>Image Place Holder</h1> */}
-                <h4>App Name Place Holder</h4>
+                <h4>NiFT</h4>
                 <p>
                   Lorem ipsum is placeholder text commonly used in the graphic,
                   print, and publishing industries for previewing layouts and

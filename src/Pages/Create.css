@@ -38,6 +38,12 @@
     margin-top: 1em;
 }
 
+.button-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .nft-link{
     text-decoration: none;
 }

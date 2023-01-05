@@ -10,14 +10,15 @@
 .price-panel{
     border: 1px solid rgb(205, 204, 204);
     border-radius: .5em;
-    
+    background-color: rgb(0, 174, 255,0.05);
 }
 .date-created{
     border: 1px solid rgb(205, 204, 204, .5);
     border-radius: .5em .5em 0 0;
-    padding: 10px;
+    padding: 20px;
     text-align: left;
     padding-left: 10px;
+    background-color: white;
 }
 .current-price{
     color: grey;
@@ -120,6 +121,8 @@
 .accordion-button{
     font-size: 20px; 
     font-weight: bolder;
+    background-color: white !important;
+    color: black !important;
 }
 
 .listing-price-labels{
@@ -168,4 +171,7 @@ span{
 }
 #favorite:hover{
     color: red;
+}
+.listing-price-labels ,.accordion-body{
+    background-color: rgb(0, 174, 255,0.05);
 }

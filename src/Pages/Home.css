@@ -1,0 +1,21 @@
+.homePage {
+    background-color: aliceblue;
+}
+
+/* HOME PAGE HEADING */
+.topHeading {
+    font-size: 3rem;
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
+.carouselCard {
+    height: 18rem;
+    width: 18rem;
+    border-radius: 12px;
+    background-position: center;
+    background-size: cover;
+    color: white;
+}
+

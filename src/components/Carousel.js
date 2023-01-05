@@ -7,7 +7,7 @@ const HomeCarousel = ({ carouselData }) => {
   const responsive = {
     superLargeDesktop: {
       breakpoint: { max: 4000, min: 3000 },
-      items: 5,
+      items: 4,
     },
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
@@ -28,20 +28,32 @@ const HomeCarousel = ({ carouselData }) => {
         {carouselData !== [] ? (
           carouselData.map((item, idx) => {
             return (
-              <Card style={{ width: "20rem" }} key={idx}>
-                <Card.Img
-                  variant="top"
-                  src={item.image}
-                  style={{
-                    height: "18rem",
-                    objectFit: "cover",
-                  }}
-                />
-                <Card.Body>
-                  <Card.Title>{item.assetName}</Card.Title>
-                  <Card.Text>{item.price}</Card.Text>
-                </Card.Body>
-              </Card>
+              <div
+                className="carouselCard"
+                key={idx}
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                }}
+              >
+                <div>
+                  <p>{item.assetName}</p>
+                  <p>{item.price}</p>
+                </div>
+              </div>
+              // <Card style={{ width: "20rem" }} key={idx}>
+              //   <Card.Img
+              //     variant="top"
+              //     src={item.image}
+              //     style={{
+              //       height: "18rem",
+              //       objectFit: "cover",
+              //     }}
+              //   />
+              //   <Card.Body>
+              //     <Card.Title>{item.assetName}</Card.Title>
+              //     <Card.Text>{item.price}</Card.Text>
+              //   </Card.Body>
+              // </Card>
             );
           })
         ) : (

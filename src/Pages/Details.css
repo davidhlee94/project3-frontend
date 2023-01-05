@@ -31,11 +31,6 @@
     justify-content: left;
     padding-left: 10px;
 }
-.image{
-    margin: 10px 60px;
-    height: auto;
-    max-height: 55em;
-}
 .details-description{
     border: 1px solid rgb(205, 204, 204);
     margin: 10px 60px 0 ;
@@ -110,9 +105,16 @@
 .nft{
     width: 100%;
     height: auto;
-    max-height: 55em;
+    max-height: 52em;
     min-height: 450px;
     min-width: 450px;
+}
+.image{
+    border: 2px solid rgb(205, 204, 204);
+    margin: 10px 60px;
+    height: auto;
+    max-height: 55em;
+    border-radius: 5px;
 }
 .accordion-button{
     font-size: 20px; 
@@ -149,4 +151,19 @@ span{
     top: 15%;
     background-color: #000;
     color: #fff;
+}
+.grid-info{
+    padding: 16px;
+}
+#favorite{
+    font-size: 25px;
+    /* border: 1px solid red; */
+    width: 5%;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+}
+#favorite:hover{
+    color: red;
 }

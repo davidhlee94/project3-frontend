@@ -33,6 +33,8 @@ const Details = () => {
         <div className='main-container'>
             <div className='left-side'>
                 <div className='image'>
+                    <p id='favorite'>&#9825;</p>
+                    <Tooltip anchorId="favorite" content="Favorite" place="bottom" />
                     <img src={nft.image} key={nft.userName} className='nft'/>
                 </div>
                 <div className='details-description'>

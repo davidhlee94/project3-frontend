@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import "./CreateCollection.css";
 
 const CreateCollection = () => {
-  // const URL = "https://dbl-project-3-backend.herokuapp.com/collection";
-  const testURL = "http://localhost:4000/collection";
+  const URL = "https://dbl-project-3-backend.herokuapp.com/collection";
+  // const testURL = "http://localhost:4000/collection";
   const [collection, setCollection] = useState([]);
   const [newForm, setNewForm] = useState({
     userName: "",
@@ -20,7 +20,7 @@ const CreateCollection = () => {
 
   const getCollection = async () => {
     try {
-      const response = await fetch(testURL);
+      const response = await fetch(URL);
       const allCollection = await response.json();
       setCollection(allCollection);
     } catch (error) {
@@ -30,7 +30,7 @@ const CreateCollection = () => {
 
   const createCollection = async (collectionData) => {
     try {
-      await fetch(testURL, {
+      await fetch(URL, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

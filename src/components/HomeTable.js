@@ -12,8 +12,8 @@ const HomeTable = ({ tableData }) => {
           <Table hover={true} borderless={true} responsive>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Price</th>
+                <th>NAME</th>
+                <th> FLOOR PRICE</th>
               </tr>
             </thead>
             <tbody>
@@ -51,8 +51,8 @@ const HomeTable = ({ tableData }) => {
           <Table hover={true} borderless={true} responsive>
             <thead>
               <tr>
-                <th>Name</th>
-                <th>Price</th>
+                <th>NAME</th>
+                <th>FLOOR PRICE</th>
               </tr>
             </thead>
             <tbody>

@@ -3,7 +3,7 @@
 .main-container{
     /* border: 1px solid black; */
     height: 80em;
-    margin: 5px;
+    margin: 0 20em;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
@@ -35,10 +35,12 @@
     text-align: left;
     padding-left: 10px;
 }
-.nft-price{
+#nft-price{
     font-weight: bolder;
     font-size: xx-large;
     justify-content: left;
+    align-items: left;
+    text-align: left;
     padding-left: 10px;
 }
 .details-description{
@@ -119,14 +121,15 @@
     max-height: 52em;
     min-height: 450px;
     min-width: 450px;
-    border-radius: 10px;
+    padding: 20px;
 }
 .image{
     border: 2px solid rgb(205, 204, 204);
     margin: 10px 20px;
     height: auto;
     max-height: 55em;
-    border-radius: 5px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .accordion-button{
     font-size: 20px; 

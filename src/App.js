@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import Home from "./Pages/Home";
 import CreateCollection from "./Pages/CreateCollection";
 import Details from "./Pages/Details";
+import Create from "./Pages/Create";
 
 
 function App() {

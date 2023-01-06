@@ -63,20 +63,14 @@ const Details = () => {
                     <p> &#8801; Description</p>
                 </div>
                 <div className='details-artist'>
-                    <p>By {nft.userName}</p>
+                    <p>By <span id='nft-c'>{nft.userName}</span></p>
                 </div> 
                 <div className='artist-accordion'>
                 <Accordion defaultActiveKey="0" >
                 <Accordion.Item eventKey="0" id='accordion-button-left'>
                     <Accordion.Header > &#8801; About {nft.assetName}</Accordion.Header>
                     <Accordion.Body>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                    eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                    minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                    aliquip ex ea commodo consequat. Duis aute irure dolor in
-                    reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                    pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                    culpa qui officia deserunt mollit anim id est laborum.
+                    {nft.description}
                     </Accordion.Body>
                 </Accordion.Item>
                 </Accordion>
@@ -98,7 +92,7 @@ const Details = () => {
                     <span>&#x263C; Created </span> {nft.createdAt.slice(0,10)}
                     </div>
                     <p className='current-price'>Current Price</p>
-                    <h1 className='nft-price'>{nft.price}$</h1>
+                    <h1 id='nft-price'>{nft.price}$</h1>
                     <button className='details-button'>BUY NOW</button>
                 </div>
                 <div className='artist-accordion-right'>

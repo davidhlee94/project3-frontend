@@ -40,6 +40,13 @@ background: linear-gradient(305deg, rgba(237,253,252,1) 6%, rgba(241,231,254,1) 
     border-radius: 12px;
     background-position: center;
     background-size: cover;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+.carousel-card:hover {
+   background-size: contain;
+   transform: scale(1.08);
 }
 
 .carousel-card-text {

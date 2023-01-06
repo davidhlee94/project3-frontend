@@ -1,6 +1,9 @@
+import "./Home.css";
 import { useState, useEffect } from "react";
+import Container from "react-bootstrap/Container";
 import HomeCarousel from "../components/Carousel";
 import HomeTable from "../components/HomeTable";
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
   const [homeData, setHomeData] = useState([]);
@@ -21,10 +24,12 @@ const Home = () => {
 
   const loaded = () => {
     return (
-      <div>
+      <Container fluid className="home-page">
+        <h1 className="top-heading">Explore, collect, and sell NFTs</h1>
         <HomeCarousel carouselData={homeData} />
         <HomeTable tableData={homeData} />
-      </div>
+        <Footer />
+      </Container>
     );
   };
 
@@ -32,12 +37,7 @@ const Home = () => {
     return <p>Loading...</p>;
   };
 
-  return (
-    <div>
-      <h1>Explore, collect, and sell NFTs</h1>
-      {homeData ? loaded() : loading()}
-    </div>
-  );
+  return homeData ? loaded() : loading();
 };
 
 export default Home;

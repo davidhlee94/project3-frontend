@@ -5,47 +5,88 @@ import Table from "react-bootstrap/Table";
 
 const HomeTable = ({ tableData }) => {
   return (
-    <Container>
-      <h1 style={{ textAlign: "left" }}>Trending</h1>
+    <Container fluid className="table-container container-fluid">
       <Row>
-        <Col>
-          <Table hover={true} responsive>
+        <Col className="table-trending-container">
+          <h1 className="table-head">Trending</h1>
+          <Table hover={true} borderless={true} responsive>
             <thead>
               <tr>
-                <th>#</th>
-                <th>Name</th>
-                <th>Price</th>
+                <th>NAME</th>
+                <th> FLOOR PRICE</th>
               </tr>
             </thead>
             <tbody>
-              {tableData.map((tableItem, idx) => {
+              {tableData.slice(0, 10).map((tableItem, idx) => {
                 return (
                   <tr
                     key={idx}
                     onClick={() => {
                       window.location = `/nft/${tableItem._id}`;
                     }}
+                    className="table-row"
                   >
                     <td>
-                      <span>{idx + 1}</span>
-                      <img
-                        src={tableItem.image}
-                        alt={tableItem.assetName}
-                        style={{
-                          width: "6rem",
-                          height: "6rem",
-                        }}
-                      />
+                      <div className="table-name-container">
+                        <span className="table-number">{idx + 1}</span>
+                        <img
+                          className="table-image"
+                          src={tableItem.image}
+                          alt={tableItem.assetName}
+                        />
+                        <h6 className="table-name">{tableItem.assetName}</h6>
+                      </div>
                     </td>
-                    <td>{tableItem.assetName}</td>
-                    <td>{tableItem.price}</td>
+                    <td className="table-price-container">
+                      <h6 className="table-price">{tableItem.price} USD</h6>
+                    </td>
                   </tr>
                 );
               })}
             </tbody>
           </Table>
         </Col>
-        {/* <Col>Table Overflow</Col> */}
+        <Col className="table-new-container">
+          <h1 className="table-head">New NFTs</h1>
+          <Table hover={true} borderless={true} responsive>
+            <thead>
+              <tr>
+                <th>NAME</th>
+                <th>FLOOR PRICE</th>
+              </tr>
+            </thead>
+            <tbody>
+              {tableData
+                .slice(tableData.length - 10, tableData.length)
+                .map((tableItem, idx) => {
+                  return (
+                    <tr
+                      key={idx}
+                      onClick={() => {
+                        window.location = `/nft/${tableItem._id}`;
+                      }}
+                      className="table-row"
+                    >
+                      <td>
+                        <div className="table-name-container">
+                          <span className="table-number">{idx + 1}</span>
+                          <img
+                            className="table-image"
+                            src={tableItem.image}
+                            alt={tableItem.assetName}
+                          />
+                          <h6 className="table-name">{tableItem.assetName}</h6>
+                        </div>
+                      </td>
+                      <td className="table-price-container">
+                        <h6 className="table-price">{tableItem.price} USD</h6>
+                      </td>
+                    </tr>
+                  );
+                })}
+            </tbody>
+          </Table>
+        </Col>
       </Row>
     </Container>
   );

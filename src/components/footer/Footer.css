@@ -1,30 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap');
 
 
-div {
+.footer-container {
     font-family: 'Rubik', sans-serif;
 }
 
 /* FOOTER TOP STYLES */
-.footerTop {
+.footer-container {
+    background-color:rgb(24,104,183);
+    width: 100vw;
+    height: 100%;
+    padding: 40px 30px 10px 30px;
+    color: rgb(251,253,255);
+    text-decoration: none;
+}
+
+.footer-top {
     border-bottom: 1px solid #508AC5;
     margin: 10px;
     padding: 15px;
 }
 
-.footerTopText {
-    text-align: left;
+.footer-top-text {
+    padding: 15px;
+    margin-left: 30px;
 }
 
-.footerTopText input {
-    width: 400px;
-    height: 50px;
+.footer-top-input {
+    width: 25rem;
+    height: 3rem;
     border-radius: 8px;
 }
 
-.footerTopText button {
-    width: 120px;
-    height: 50px;
+.footer-top-button {
+    width: 8rem;
+    height: 3rem;
     margin: 0 10px 0 10px;
     border-radius: 8px;
     border: none;
@@ -33,19 +43,30 @@ div {
     font-family: 'Rubik', sans-serif;
 }
 
+.community-text {
+    text-align: center;
+}
 /* FOOTER BOTTOM STYLES */
-.footerBottom {
+.footer-bottom {
     border-bottom: 1px solid #508AC5;
     padding: 15px;
     margin: 10px;
 }
 
-.footerBottomText {
+.footer-bottom-text {
     text-align: left;
 }
 
+.nift-text {
+    text-align: center;
+}
 /* FOOTER ICONS */
-.footerIcon {
+.footer-logo-icon {
+    font-size: 2.5rem;
+    padding: 5px;
+}
+
+.footer-icon {
     height: 2rem;
     width: 2rem;
     border-radius: 8px;
@@ -56,20 +77,19 @@ div {
     margin: 5px;
 }
 
-.footerIcon:hover {
+.footer-icon:hover {
     transition: .3;
     filter: opacity(.8);
-    /* font-size: 2.2rem; */
 }
 
 /* FOOTER LINKS FOR EACH PERSON */
-.footerLink {
+.footer-link {
     text-decoration: none;
     color: white;
     font-size: 1rem;
 }
 
-.footerLink:hover {
+.footer-link:hover {
     transition: .3;
     border-bottom: 1px solid white;
     color: whitesmoke;

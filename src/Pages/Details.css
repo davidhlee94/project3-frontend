@@ -121,6 +121,7 @@
     max-height: 52em;
     min-height: 450px;
     min-width: 450px;
+    object-fit: cover;
 }
 .image{
     border: 2px solid rgb(205, 204, 204);
@@ -200,11 +201,9 @@ span{
 }
 @media only screen and (max-width: 850px){
     .main-container{
-        display: block;
-        
+        display: block;  
     }
     .nft{
-        max-width:100%;
-        max-height:100%;
+        object-fit: cover;
     }
 }

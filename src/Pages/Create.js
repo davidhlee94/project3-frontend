@@ -11,6 +11,7 @@ const Create = () => {
     assetName: "",
     image: "",
     price: "",
+    description: "",
   });
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -51,7 +52,13 @@ const Create = () => {
     e.preventDefault();
     const currentState = { ...newForm };
     createNFT(currentState);
-    setNewForm({ userName: "", assetName: "", image: "", price: "" });
+    setNewForm({
+      userName: "",
+      assetName: "",
+      image: "",
+      price: "",
+      description: "",
+    });
     console.log("submitted");
   };
 
@@ -65,6 +72,7 @@ const Create = () => {
           </div>
           <h3 className="nft-price">Price: {nft.price}</h3>
           <h3 className="nft-username">Username: {nft.userName}</h3>
+          <h3 className="nft-username">description: {nft.description}</h3>
         </Link>
       </div>
     );
@@ -127,14 +135,26 @@ const Create = () => {
                 onChange={handleChange}
               />
             </div>
-            <input
-              type="submit"
-              value="Create NFT"
-              className="button"
-              onClick={() => {
-                handleShow(trigger);
-              }}
-            />
+            <div className="description-container">
+              <p className="input-title">Description:</p>
+              <input
+                type="text"
+                value={newForm.description}
+                name="description"
+                placeholder="Description"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="button-container">
+              <input
+                type="submit"
+                value="Create NFT"
+                className="button"
+                onClick={() => {
+                  handleShow(trigger);
+                }}
+              />
+            </div>
             <Modal className="modal" show={show} onHide={handleClose}>
               <h1 className="modal-text">Congratulations!</h1>
               <h1 className="modal-text">You've just created an NFT!</h1>

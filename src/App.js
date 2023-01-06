@@ -6,6 +6,7 @@ import CreateCollection from "./Pages/CreateCollection";
 import Details from "./Pages/Details";
 import Create from "./Pages/Create";
 
+import Barchart from "./components/Barchart";
 
 function App() {
   return (

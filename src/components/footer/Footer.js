@@ -11,43 +11,36 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 
 const Footer = () => {
-  const tsContainer = {
-    backgroundColor: "rgb(24,104,183)",
-    width: "100vw",
-    height: "500px",
-    paddingTop: "40px",
-    paddingLeft: "30px",
-    paddingRight: "30px",
-    color: "rgb(251,253,255)",
-    textDecoration: "none",
-  };
   return (
-    <Container fluid style={tsContainer}>
-      <Row className="footerTop">
-        <Col className="footerTopText">
+    <Container className="footer-container" fluid>
+      <Row className="footer-top">
+        <Col className="footer-top-text">
           <h2>Stay in the loop</h2>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
           </p>
-          <input placeholder="Your emaild address"></input>
-          <button>Sign Up</button>
+          <input
+            className="footer-top-input"
+            placeholder="Your emaild address"
+          ></input>
+          <button className="footer-top-button">Sign Up</button>
         </Col>
-        <Col>
+        <Col className="community-text">
           <h2>Join the Community</h2>
           <Row>
             <Col>
               <a href="/">
-                <FontAwesomeIcon icon={faFacebook} className="footerIcon" />
+                <FontAwesomeIcon icon={faFacebook} className="footer-icon" />
               </a>
               <a href="/">
-                <FontAwesomeIcon icon={faInstagram} className="footerIcon" />
+                <FontAwesomeIcon icon={faInstagram} className="footer-icon" />
               </a>
               <a href="/">
-                <FontAwesomeIcon icon={faTwitter} className="footerIcon" />
+                <FontAwesomeIcon icon={faTwitter} className="footer-icon" />
               </a>
               <a href="/">
-                <FontAwesomeIcon icon={faTwitch} className="footerIcon" />
+                <FontAwesomeIcon icon={faTwitch} className="footer-icon" />
               </a>
             </Col>
           </Row>
@@ -71,37 +64,37 @@ const Footer = () => {
         </Col>
         <Col>
           <h5>David</h5>
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             GitHub
           </a>
           <br />
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             LinkedIn
           </a>
           <br />
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             FaceBook
           </a>
           <br />
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             Twitter
           </a>
         </Col>
         <Col>
           <h5>Barezi</h5>
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             GitHub
           </a>
           <br />
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             LinkedIn
           </a>
           <br />
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             FaceBook
           </a>
           <br />
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             Twitter
           </a>
         </Col>
@@ -124,14 +117,6 @@ const Footer = () => {
           </a>
         </Col>
       </Row>
-      {/* <Row>
-        <Col>
-          <p>2023</p>
-        </Col>
-        <Col>
-          <p>Privacy Policy Terms of Service</p>
-        </Col>
-      </Row> */}
     </Container>
   );
 };

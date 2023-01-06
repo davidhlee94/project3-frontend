@@ -4,7 +4,8 @@ import Header from "./components/Header";
 import Home from "./Pages/Home";
 import Create from "./Pages/Create";
 import Details from "./Pages/Details";
-import Barchart from "./components/Barchart";
+import Footer from "./components/Footer";
+
 
 function App() {
   return (

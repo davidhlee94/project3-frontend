@@ -6,6 +6,8 @@ import { useParams } from 'react-router-dom'
 import { Tooltip } from 'react-tooltip';
 import 'react-tooltip/dist/react-tooltip.css'
 import Barchart from '../components/Barchart';
+import Detailscarousel from '../components/Detailscarousel';
+
 
 const Details = () => {
     const [ nft, setNFT ] = useState(null)
@@ -29,7 +31,27 @@ const Details = () => {
             </>
         )
     }
+    const responsive = {
+        superLargeDesktop: {
+          // the naming can be any, depends on you.
+          breakpoint: { max: 4000, min: 3000 },
+          items: 5
+        },
+        desktop: {
+          breakpoint: { max: 3000, min: 1024 },
+          items: 3
+        },
+        tablet: {
+          breakpoint: { max: 1024, min: 464 },
+          items: 2
+        },
+        mobile: {
+          breakpoint: { max: 464, min: 0 },
+          items: 1
+        }
+      };
     return(
+        
         <div className='main-container'>
             <div className='left-side'>
                 <div className='image'>
@@ -43,10 +65,10 @@ const Details = () => {
                 <div className='details-artist'>
                     <p>By {nft.userName}</p>
                 </div> 
-                <div className='detail'>
-                <Accordion defaultActiveKey="0">
-                <Accordion.Item eventKey="0">
-                    <Accordion.Header> &#8801; About {nft.assetName}</Accordion.Header>
+                <div className='artist-accordion'>
+                <Accordion defaultActiveKey="0" >
+                <Accordion.Item eventKey="0" id='accordion-button-left'>
+                    <Accordion.Header > &#8801; About {nft.assetName}</Accordion.Header>
                     <Accordion.Body>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
                     eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
@@ -66,7 +88,7 @@ const Details = () => {
                 </div>
                 <div className='artist-collection'>
                     <p><span>Created by</span> {nft.userName}</p>
-                    <div>
+                    <div className='icon'>
                         <a href={`${nft.image}`}id='icon'>&#x274F;</a>
                         <Tooltip anchorId="icon" content="Full Image" />
                     </div>
@@ -79,7 +101,7 @@ const Details = () => {
                     <h1 className='nft-price'>{nft.price}$</h1>
                     <button className='details-button'>BUY NOW</button>
                 </div>
-                <div className='artist-accordion'>
+                <div className='artist-accordion-right'>
                     <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>&#x24; Price History</Accordion.Header>
@@ -89,7 +111,7 @@ const Details = () => {
                     </Accordion.Item>
                     </Accordion>    
                 </div>
-                <div className='artist-accordion'>
+                <div className='artist-accordion-right'>
                     <Accordion defaultActiveKey="0">
                     <Accordion.Item eventKey="0">
                         <Accordion.Header>&#x270E; Listings</Accordion.Header>
@@ -117,29 +139,16 @@ const Details = () => {
                             {nft.userName}
                             </div>
                             <button className='grid-button'>BUY NOW</button>
-                        
-                        </Accordion.Body>
-                    </Accordion.Item>
-                    </Accordion>    
-                </div>
-                <div className='artist-accordion'>
-                    <Accordion defaultActiveKey="0">
-                    <Accordion.Item eventKey="0">
-                        <Accordion.Header> &#x279A; Item Activity</Accordion.Header>
-                        <Accordion.Body>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-                        eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-                        minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-                        aliquip ex ea commodo consequat. Duis aute irure dolor in
-                        reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-                        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                        culpa qui officia deserunt mollit anim id est laborum.
                         </Accordion.Body>
                     </Accordion.Item>
                     </Accordion>    
                 </div>
             </div>
+            <div className='display-similar'>
+                <Detailscarousel/>
+            </div>
         </div>
+        
     )
     }
     

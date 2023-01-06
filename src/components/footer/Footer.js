@@ -23,7 +23,7 @@ const Footer = () => {
           </p>
           <input
             className="footer-top-input"
-            placeholder="Your emaild address"
+            placeholder="Your email address"
           ></input>
           <button className="footer-top-button">Sign Up</button>
         </Col>

@@ -9,6 +9,7 @@ import {
   faTwitch,
   faTwitter,
 } from "@fortawesome/free-brands-svg-icons";
+import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
 
 const Footer = () => {
   return (
@@ -46,12 +47,15 @@ const Footer = () => {
           </Row>
         </Col>
       </Row>
-      <Row className="footerBottom">
+      <Row className="footer-bottom">
         <Col>
           <Container>
-            <Row className="footerBottomText">
-              <Col>
-                {/* <h1>Image Place Holder</h1> */}
+            <Row className="footer-bottom-text">
+              <Col className="nift-text">
+                <FontAwesomeIcon
+                  icon={faLaptopCode}
+                  className="footer-logo-icon"
+                />
                 <h4>NiFT</h4>
                 <p>
                   Lorem ipsum is placeholder text commonly used in the graphic,
@@ -63,58 +67,64 @@ const Footer = () => {
           </Container>
         </Col>
         <Col>
-          <h5>David</h5>
-          <a href="/" className="footer-link">
-            GitHub
-          </a>
-          <br />
-          <a href="/" className="footer-link">
-            LinkedIn
-          </a>
-          <br />
-          <a href="/" className="footer-link">
-            FaceBook
-          </a>
-          <br />
-          <a href="/" className="footer-link">
-            Twitter
-          </a>
-        </Col>
-        <Col>
-          <h5>Barezi</h5>
-          <a href="/" className="footer-link">
-            GitHub
-          </a>
-          <br />
-          <a href="/" className="footer-link">
-            LinkedIn
-          </a>
-          <br />
-          <a href="/" className="footer-link">
-            FaceBook
-          </a>
-          <br />
-          <a href="/" className="footer-link">
-            Twitter
-          </a>
-        </Col>
-        <Col>
-          <h5>Luigi</h5>
-          <a href="/" className="footer-link">
-            GitHub
-          </a>
-          <br />
-          <a href="/" className="footer-link">
-            LinkedIn
-          </a>
-          <br />
-          <a href="/" className="footer-link">
-            FaceBook
-          </a>
-          <br />
-          <a href="/" className="footer-link">
-            Twitter
-          </a>
+          <Container>
+            <Row>
+              <Col>
+                <h5>David</h5>
+                <a href="/" className="footer-link">
+                  GitHub
+                </a>
+                <br />
+                <a href="/" className="footer-link">
+                  LinkedIn
+                </a>
+                <br />
+                <a href="/" className="footer-link">
+                  FaceBook
+                </a>
+                <br />
+                <a href="/" className="footer-link">
+                  Twitter
+                </a>
+              </Col>
+              <Col>
+                <h5>Barezi</h5>
+                <a href="/" className="footer-link">
+                  GitHub
+                </a>
+                <br />
+                <a href="/" className="footer-link">
+                  LinkedIn
+                </a>
+                <br />
+                <a href="/" className="footer-link">
+                  FaceBook
+                </a>
+                <br />
+                <a href="/" className="footer-link">
+                  Twitter
+                </a>
+              </Col>
+              <Col>
+                <h5>Luigi</h5>
+                <a href="/" className="footer-link">
+                  GitHub
+                </a>
+                <br />
+                <a href="/" className="footer-link">
+                  LinkedIn
+                </a>
+                <br />
+                <a href="/" className="footer-link">
+                  FaceBook
+                </a>
+                <br />
+                <a href="/" className="footer-link">
+                  Twitter
+                </a>
+              </Col>
+            </Row>
+          </Container>
         </Col>
       </Row>
     </Container>

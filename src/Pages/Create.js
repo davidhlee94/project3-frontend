@@ -11,6 +11,7 @@ const Create = () => {
     assetName: "",
     image: "",
     price: "",
+    description: ""
   });
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -51,7 +52,7 @@ const Create = () => {
     e.preventDefault();
     const currentState = { ...newForm };
     createNFT(currentState);
-    setNewForm({ userName: "", assetName: "", image: "", price: "" });
+    setNewForm({ userName: "", assetName: "", image: "", price: "", description: ""});
     console.log("submitted");
   };
 
@@ -65,6 +66,7 @@ const Create = () => {
           </div>
           <h3 className="nft-price">Price: {nft.price}</h3>
           <h3 className="nft-username">Username: {nft.userName}</h3>
+          <h3 className="nft-username">description: {nft.description}</h3>
         </Link>
       </div>
     );
@@ -124,6 +126,16 @@ const Create = () => {
                 value={newForm.price}
                 name="price"
                 placeholder="Price"
+                onChange={handleChange}
+              />
+            </div>
+            <div className="description-container">
+              <p className="input-title">Description:</p>
+              <input
+                type="text"
+                value={newForm.description}
+                name="description"
+                placeholder="Description"
                 onChange={handleChange}
               />
             </div>

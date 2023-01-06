@@ -1,6 +1,5 @@
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Card from "react-bootstrap/Card";
+import Carousel from "react-multi-carousel";
 import Container from "react-bootstrap/Container";
 
 const HomeCarousel = ({ carouselData }) => {
@@ -23,7 +22,7 @@ const HomeCarousel = ({ carouselData }) => {
     },
   };
   return (
-    <Container>
+    <Container fluid className="carouselContainer">
       <Carousel responsive={responsive} focusOnSelect={true}>
         {carouselData !== [] ? (
           carouselData.map((item, idx) => {
@@ -35,25 +34,11 @@ const HomeCarousel = ({ carouselData }) => {
                   backgroundImage: `url(${item.image})`,
                 }}
               >
-                <div>
+                <div className="carouselCardText">
                   <p>{item.assetName}</p>
                   <p>{item.price}</p>
                 </div>
               </div>
-              // <Card style={{ width: "20rem" }} key={idx}>
-              //   <Card.Img
-              //     variant="top"
-              //     src={item.image}
-              //     style={{
-              //       height: "18rem",
-              //       objectFit: "cover",
-              //     }}
-              //   />
-              //   <Card.Body>
-              //     <Card.Title>{item.assetName}</Card.Title>
-              //     <Card.Text>{item.price}</Card.Text>
-              //   </Card.Body>
-              // </Card>
             );
           })
         ) : (

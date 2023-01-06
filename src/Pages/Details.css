@@ -10,14 +10,15 @@
 .price-panel{
     border: 1px solid rgb(205, 204, 204);
     border-radius: .5em;
-    
+    background-color: rgb(0, 174, 255,0.05);
 }
 .date-created{
     border: 1px solid rgb(205, 204, 204, .5);
     border-radius: .5em .5em 0 0;
-    padding: 10px;
+    padding: 20px;
     text-align: left;
     padding-left: 10px;
+    background-color: white;
 }
 .current-price{
     color: grey;
@@ -30,11 +31,6 @@
     font-size: xx-large;
     justify-content: left;
     padding-left: 10px;
-}
-.image{
-    margin: 10px 60px;
-    height: auto;
-    max-height: 55em;
 }
 .details-description{
     border: 1px solid rgb(205, 204, 204);
@@ -110,13 +106,23 @@
 .nft{
     width: 100%;
     height: auto;
-    max-height: 55em;
+    max-height: 52em;
     min-height: 450px;
     min-width: 450px;
+    border-radius: 10px;
+}
+.image{
+    border: 2px solid rgb(205, 204, 204);
+    margin: 10px 60px;
+    height: auto;
+    max-height: 55em;
+    border-radius: 5px;
 }
 .accordion-button{
     font-size: 20px; 
     font-weight: bolder;
+    background-color: white !important;
+    color: black !important;
 }
 
 .listing-price-labels{
@@ -135,4 +141,37 @@
 }
 span{
     color: black;
+    font-weight: bolder;
+}
+#icon{
+    color:  grey;
+    font-size: xx-large;
+    padding: 0;
+    margin: 0;
+    padding-top: 5px;
+    text-decoration: none;
+}
+#tooltip{
+    position: absolute;
+    top: 15%;
+    background-color: #000;
+    color: #fff;
+}
+.grid-info{
+    padding: 16px;
+}
+#favorite{
+    font-size: 25px;
+    /* border: 1px solid red; */
+    width: 5%;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+}
+#favorite:hover{
+    color: red;
+}
+.listing-price-labels ,.accordion-body{
+    background-color: rgb(0, 174, 255,0.05);
 }

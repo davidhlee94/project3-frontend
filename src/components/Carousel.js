@@ -1,51 +1,76 @@
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
-import Container from "react-bootstrap/Container";
 
 const HomeCarousel = ({ carouselData }) => {
   const responsive = {
+    ultrawideDesktop: {
+      breakpoint: { max: 4000, min: 3600 },
+      centerMode: true,
+      items: 9,
+    },
     superLargeDesktop: {
-      breakpoint: { max: 4000, min: 3000 },
+      breakpoint: { max: 3600, min: 3200 },
+      items: 8,
+    },
+    largeDesktop: {
+      breakpoint: { max: 3200, min: 2800 },
+      items: 7,
+    },
+    medDesktop: {
+      breakpoint: { max: 2800, min: 2400 },
+      items: 6,
+    },
+    smallDesktop: {
+      breakpoint: { max: 2400, min: 2000 },
+      items: 5,
+    },
+    xSmallDesktop: {
+      breakpoint: { max: 2000, min: 1600 },
       items: 4,
     },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
+    tablet: {
+      breakpoint: { max: 1600, min: 1200 },
       items: 3,
     },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
+    smallTablet: {
+      breakpoint: { max: 1200, min: 800 },
       items: 2,
     },
     mobile: {
-      breakpoint: { max: 464, min: 0 },
+      breakpoint: { max: 800, min: 0 },
       items: 1,
     },
   };
   return (
-    <Container fluid className="carouselContainer">
-      <Carousel responsive={responsive} focusOnSelect={true}>
-        {carouselData !== [] ? (
-          carouselData.map((item, idx) => {
-            return (
-              <div
-                className="carouselCard"
-                key={idx}
-                style={{
-                  backgroundImage: `url(${item.image})`,
-                }}
-              >
-                <div className="carouselCardText">
-                  <p>{item.assetName}</p>
-                  <p>{item.price}</p>
-                </div>
+    <Carousel
+      autoPlay={true}
+      autoPlaySpeed={5000}
+      responsive={responsive}
+      infinite={true}
+      containerClass="carousel-container"
+      removeArrowOnDeviceType={["tablet", "mobile"]}
+    >
+      {carouselData !== [] ? (
+        carouselData.map((item, idx) => {
+          return (
+            <div
+              className="carousel-card"
+              key={idx}
+              style={{
+                backgroundImage: `url(${item.image})`,
+              }}
+            >
+              <div className="carousel-card-text">
+                <h5>{item.assetName}</h5>
+                <p>{item.price}</p>
               </div>
-            );
-          })
-        ) : (
-          <p>Loading...</p>
-        )}
-      </Carousel>
-    </Container>
+            </div>
+          );
+        })
+      ) : (
+        <p>Loading...</p>
+      )}
+    </Carousel>
   );
 };
 

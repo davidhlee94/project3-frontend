@@ -1,43 +1,46 @@
+/* .topHeading {
+    background: rgb(237,253,252);
+background: linear-gradient(305deg, rgba(237,253,252,1) 6%, rgba(241,231,254,1) 26%, rgba(213,236,253,1) 53%, rgba(226,243,254,1) 72%, rgba(241,231,254,1) 100%);
+} */
 
 /* HOME PAGE HEADING */
-.topHeading {
+.top-heading {
     font-size: 3rem;
     text-align: center;
-    padding: 20px;
-    margin: 20px 0 20px 0;
+    padding: 40px;
+    /* margin: 20px 0 20px 0; */
 }
-
 
 /* CAROUSEL STYLES */
-.carouselContainer{
-    /* background-color: red; */
-    margin-bottom: 40px;
-    padding: 8px;
+.carousel-container{
+  padding: 40px 30px 50px 30px;
 }
-
-.carouselCard {
-    height: 18rem;
-    width: 18rem;
+.carousel-card {
+    height: 22rem;
+    width: 22rem;
     border-radius: 12px;
     background-position: center;
     background-size: cover;
     color: white;
 }
 
-.carouselCardText {
+.carousel-card-text {
     width: 100%;
     height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    padding: 10px;
+    padding-left: 10px;
     font-size: 1rem;
     font-weight: bold;
 }
 
+.react-multi-carousel-list button {
+    background-color: #1868B7;
+}
+
 /* HOME PAGE TABLE STYLES */
 .table-container {
-    background-color: white;
     margin-left: 30px;
     margin-right: 30px;
 }

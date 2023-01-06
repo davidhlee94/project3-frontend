@@ -24,7 +24,8 @@ const Home = () => {
 
   const loaded = () => {
     return (
-      <Container fluid>
+      <Container fluid className="home-page">
+        <h1 className="top-heading">Explore, collect, and sell NFTs</h1>
         <HomeCarousel carouselData={homeData} />
         <HomeTable tableData={homeData} />
         <Footer />
@@ -36,12 +37,7 @@ const Home = () => {
     return <p>Loading...</p>;
   };
 
-  return (
-    <div className="homePage">
-      <h1 className="topHeading">Explore, collect, and sell NFTs</h1>
-      {homeData ? loaded() : loading()}
-    </div>
-  );
+  return homeData ? loaded() : loading();
 };
 
 export default Home;

@@ -49,6 +49,7 @@ const HomeCarousel = ({ carouselData }) => {
       infinite={true}
       containerClass="carousel-container"
       removeArrowOnDeviceType={["tablet", "mobile"]}
+      // itemClass="carousel-item-padding-40-px"
     >
       {carouselData !== [] ? (
         carouselData.map((item, idx) => {

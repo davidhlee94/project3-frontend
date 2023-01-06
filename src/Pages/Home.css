@@ -20,7 +20,7 @@
     background: -webkit-linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
     background: -moz-linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
     background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -32,7 +32,7 @@ background: linear-gradient(305deg, rgba(237,253,252,1) 6%, rgba(241,231,254,1) 
 
 /* CAROUSEL STYLES */
 .carousel-container{
-  padding: 40px 30px 50px 30px;
+  padding: 30px 30px 40px 30px;
 }
 .carousel-card {
     height: 22rem;
@@ -40,8 +40,10 @@ background: linear-gradient(305deg, rgba(237,253,252,1) 6%, rgba(241,231,254,1) 
     border-radius: 12px;
     background-position: center;
     background-size: cover;
+    object-fit: cover;
     transition: all 0.5s;
     overflow: hidden;
+    margin-right: 15px;
 }
 
 .carousel-card:hover {
@@ -106,6 +108,7 @@ th {
 }
 
 .table-image {
+    object-fit: cover;
     border-radius: 12px;
     width: 5rem;
     height: 5rem;

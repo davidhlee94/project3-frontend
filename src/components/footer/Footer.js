@@ -100,19 +100,19 @@ const Footer = () => {
         </Col>
         <Col>
           <h5>Luigi</h5>
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             GitHub
           </a>
           <br />
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             LinkedIn
           </a>
           <br />
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             FaceBook
           </a>
           <br />
-          <a href="/" className="footerLink">
+          <a href="/" className="footer-link">
             Twitter
           </a>
         </Col>

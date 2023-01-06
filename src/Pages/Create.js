@@ -65,7 +65,7 @@ const Create = () => {
   const loaded = () => {
     return (
       <div key={nft._id} className="nft-id">
-        <Link to={`/${nft._id}`} className="nft-link">
+        <Link to={`/nft/${nft._id}`} className="nft-link">
           <h1 className="nft-name">NFT Name: {nft.assetName}</h1>
           <div className="nft-image-container">
             <img className="nft-image" src={nft.image} alt={nft.assetName} />

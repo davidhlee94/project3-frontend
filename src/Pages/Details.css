@@ -69,6 +69,11 @@
     margin-top: 10px;
     margin-left: 1em;
 }
+
+.test{
+    border: 1px green solid;
+    height: 40px
+}
 .detail{
     /* border: 1px solid black; */
     margin: 0 60px;
@@ -145,10 +150,6 @@
     top: 10px;
 }
 
-.listing-price-labels{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
 .grid-button{
     background-color: #2E8EEE;
     border-radius: 10px;

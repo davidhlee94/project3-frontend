@@ -13,6 +13,7 @@
     "react-chartjs-2": "^5.1.0",
     "react-dom": "^18.2.0",
     "react-multi-carousel": "^2.8.2",
+    "react-multi-select-component": "^4.3.4",
     "react-router": "^6.6.1",
     "react-router-dom": "^6.6.1",
     "react-scripts": "5.0.1",

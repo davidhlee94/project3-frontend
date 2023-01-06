@@ -1,0 +1,29 @@
+#bottom{
+    border: 2px solid rgb(205, 204, 204);
+    height: 30em;
+    width: 30em;
+    margin: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+#carousel-image{
+    height: 20em;
+    width: 100%;
+}
+.carousel-name{
+    font-size: x-large;
+    margin: 30px 0 0 10px;
+}
+.carousel-price{
+    font-size: large;
+    margin: 10px 0 0 10px;
+}
+.carousel-artist{
+    margin: 10px 0 0 10px;
+}
+#nft-c{
+    color: #2E8EEE;
+}
+.react-multi-carousel-track{
+    width: 0 !important;
+}

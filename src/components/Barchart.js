@@ -25,7 +25,7 @@ function Barchart(props) {
             {
                 label: 'Price ',
                 data: [ props.price],
-                backgroundColor: 'aqua',
+                backgroundColor: '#2E8EEE',
                 borderColor: 'black',
                 borderWidth: 1,
             }

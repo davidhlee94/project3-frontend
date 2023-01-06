@@ -2,9 +2,8 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Header from "./components/Header";
 import Home from "./Pages/Home";
-import Create from "./Pages/Create";
+import CreateCollection from "./Pages/CreateCollection";
 import Details from "./Pages/Details";
-import Footer from "./components/Footer";
 
 
 function App() {
@@ -16,6 +15,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/create" element={<Create />} />
           <Route path="/nft/:id" element={<Details />} />
+          <Route path="/collection" element={<CreateCollection/>}/>
         </Routes>
       </div>
     </div>

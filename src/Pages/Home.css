@@ -102,6 +102,7 @@ th {
     padding: 10px;
     font-size: 1.2rem;
     font-weight: bold;
+    color:grey;
 }
 
 .table-image {
@@ -110,8 +111,10 @@ th {
     height: 5rem;
 }
 
-.tableName .tablePrice {
+.table-name, .table-price {
+    font-weight: bold;
     color: #05111E;
+
 }
 
 .table-name-container {

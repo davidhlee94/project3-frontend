@@ -62,7 +62,7 @@ const HomeCarousel = ({ carouselData }) => {
             >
               <div className="carousel-card-text">
                 <h5>{item.assetName}</h5>
-                <p>{item.price}</p>
+                <p>Floor: {item.price} USD</p>
               </div>
             </div>
           );

@@ -38,7 +38,7 @@ const HomeTable = ({ tableData }) => {
                       </div>
                     </td>
                     <td className="table-price-container">
-                      <h6>{tableItem.price} USD</h6>
+                      <h6 className="table-price">{tableItem.price} USD</h6>
                     </td>
                   </tr>
                 );
@@ -79,7 +79,7 @@ const HomeTable = ({ tableData }) => {
                         </div>
                       </td>
                       <td className="table-price-container">
-                        <h6>{tableItem.price} USD</h6>
+                        <h6 className="table-price">{tableItem.price} USD</h6>
                       </td>
                     </tr>
                   );

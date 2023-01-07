@@ -60,54 +60,27 @@ const Details = () => {
   return (
     <div className="main-container">
       <div className="left-side">
+      <div className="asset-name">
+          <p>{nft.assetName}</p>
+        </div>
         <div className="image">
           <p id="favorite">&#9825;</p>
           <Tooltip anchorId="favorite" content="Favorite" place="bottom" />
           <img src={nft.image} key={nft.userName} className="nft" />
-        </div>
-        <div className="details-description">
-          <p> &#8801; Description</p>
-        </div>
-        <div className="details-artist">
-          <p>
-            By <span id="nft-c">{nft.userName}</span>
-          </p>
-        </div>
-        <div className="artist-accordion">
-          <Accordion defaultActiveKey="0">
-            <Accordion.Item eventKey="0" id="accordion-button-left">
-              <Accordion.Header>
-                {" "}
-                &#8801; About {nft.assetName}
-              </Accordion.Header>
-              <Accordion.Body>{nft.description}</Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
-        </div>
-      </div>
-      <div className="right-side">
-        <div className="asset-name">
-          <p>{nft.assetName}</p>
         </div>
         <div className="artist-collection">
           <p>
             <span>Created by</span> {nft.userName}
           </p>
           <div className="icon">
-            <a href={`${nft.image}`} id="icon">
+            <a href={`${nft.image}`} id="icon-piece">
               &#x274F;
             </a>
-            <Tooltip anchorId="icon" content="Full Image" />
+            <Tooltip anchorId="icon-piece" content="Full Image"/>
           </div>
         </div>
-        <div className="price-panel">
-          <div className="date-created">
-            <span>&#x263C; Created </span> {nft.createdAt.slice(0, 10)}
-          </div>
-          <p className="current-price">Current Price</p>
-          <h1 id="nft-price">{nft.price}$</h1>
-          <button className="details-button">BUY NOW</button>
-        </div>
+      </div>
+      <div className="right-side">
         <div className="artist-accordion-right">
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0">
@@ -121,7 +94,27 @@ const Details = () => {
             </Accordion.Item>
           </Accordion>
         </div>
-        <div className="artist-accordion-right">
+        <div className="price-panel">
+          <div className="date-created">
+            <span>&#x263C; Created </span> {nft.createdAt.slice(0, 10)}
+          </div>
+          <p className="current-price">Current Price</p>
+          <h1 id="nft-price">{nft.price}$</h1>
+          <button className="details-button">BUY NOW</button>
+        </div>
+        <div className="artist-accordion">
+          <Accordion defaultActiveKey="0">
+            <Accordion.Item eventKey="0" id="accordion-button-left">
+              <Accordion.Header>
+                {" "}
+                &#8801; About {nft.assetName}
+              </Accordion.Header>
+              <Accordion.Body>{nft.description}</Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
+        </div>
+      </div>
+      <div id="reviews" className="artist-accordion-right">
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0">
               <Accordion.Header>&#x270E; Reviews</Accordion.Header>
@@ -133,11 +126,10 @@ const Details = () => {
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
-        </div>
       </div>
-      {/* <div className="display-similar">
+      <div className="display-similar">
         <Detailscarousel />
-      </div> */}
+      </div>
     </div>
   );
 };

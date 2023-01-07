@@ -1,0 +1,43 @@
+#review-container{
+    /* border: 1px solid red; */
+    display: grid;
+    grid-template-columns: .5fr 2fr .5fr;
+    grid-template-rows: 1fr;
+}
+#review-text{
+    /* border: 1px solid red; */
+    width: 100%;
+    height: 100%;
+}
+#rating-text{
+    width: 60%;
+}
+#review-button{
+    text-align: right;
+
+}
+#button{
+    height: 100%;
+    border: none;
+    background-color: #2E8EEE;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+}
+#review-table-outer{
+    border: 1px solid red;
+    overflow: hidden;
+    margin-top: 10px;
+}
+#review-table{
+    height: 20em;
+    width: 1000em;
+    margin-top: 10px;
+    display: flex;
+}
+#review{
+    overflow-x: scroll;
+    border: 1px solid red;
+    height: 100%;
+    width: 20em;
+}

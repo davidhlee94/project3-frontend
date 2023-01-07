@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
+import './Review.css'
 
 const Review = ({ reviewData, nftId }) => {
   const [newForm, setNewForm] = useState({
@@ -70,10 +71,10 @@ const Review = ({ reviewData, nftId }) => {
 
   const loaded = () => {
     return finalReviewData.map((data) => (
-      <div key={data._id}>
-        <p>{data.rating}</p>
-        <p>{data.content}</p>
-      </div>
+        <div key={data._id} id='review'>
+          <p>{data.rating}</p>
+          <p>{data.content}</p>
+        </div>
     ));
   };
 
@@ -89,33 +90,33 @@ const Review = ({ reviewData, nftId }) => {
 
   return (
     <div>
-      <div>
-        <form onSubmit={handleSubmit}>
-          <div className="">
-            <p className="">Rating</p>
+      <div >
+        <form onSubmit={handleSubmit} id="review-container">
+          <div id="review-text">
             <input
               type="text"
               value={newForm.rating}
+              id="rating-text"
               name="rating"
-              placeholder="Rating"
+              placeholder="Rating 1-5"
               onChange={handleChange}
             />
           </div>
-          <div className="">
-            <p className="">Review</p>
+          <div id="review-text">
             <input
               type="text"
               value={newForm.content}
               name="content"
+              id="review-text"
               placeholder="Review"
               onChange={handleChange}
             />
           </div>
-          <div className="button-container">
+          <div id="review-button">
             <input
               type="submit"
               value="Create Review"
-              className="button"
+              id="button"
               onClick={() => {
                 handleShow();
               }}
@@ -127,7 +128,12 @@ const Review = ({ reviewData, nftId }) => {
           </Modal>
         </form>
       </div>
-      {finalReviewData && finalReviewData.length ? loaded() : loading()}
+      <div id="review-table-outer">
+        <div id="review-table">
+          {finalReviewData && finalReviewData.length ? loaded() : loading()}
+
+        </div>
+      </div>
     </div>
   );
 };

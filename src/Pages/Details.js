@@ -22,7 +22,7 @@ const Details = () => {
     );
     const data = await response.json();
     setNFT(data);
-    // console.log(data);
+    console.log("this is displayDetails() data", data);
   }
   useEffect(() => {
     displayDetails();
@@ -129,7 +129,7 @@ const Details = () => {
                 <Review 
                 reviewData={nft.reviews}
                 nftId={nft._id}
-                />
+                /><></>
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>

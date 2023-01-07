@@ -10,6 +10,7 @@ import "react-tooltip/dist/react-tooltip.css";
 import Barchart from "../components/Barchart";
 import Detailscarousel from "../components/Detailscarousel";
 import Review from "../components/Review";
+import Footer from "../components/footer/Footer";
 
 const Details = () => {
   const [nft, setNFT] = useState(null);
@@ -129,6 +130,9 @@ const Details = () => {
       </div>
       <div className="display-similar">
         <Detailscarousel />
+      </div>
+      <div id="footer-container">
+        <Footer/> 
       </div>
     </div>
   );

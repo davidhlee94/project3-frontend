@@ -72,8 +72,12 @@ const Review = ({ reviewData, nftId }) => {
   const loaded = () => {
     return finalReviewData.map((data) => (
         <div key={data._id} id='review'>
-          <p>{data.rating}</p>
-          <p>{data.content}</p>
+          <img id="review-image" src="https://genslerzudansdentistry.com/wp-content/uploads/2015/11/anonymous-user.png" key='anonymouse'/>
+          
+          <div id="review-bubble-text">
+            <p>{data.rating} &#x2605;</p>
+            <p>{data.content}</p>
+          </div>
         </div>
     ));
   };
@@ -128,13 +132,10 @@ const Review = ({ reviewData, nftId }) => {
           </Modal>
         </form>
       </div>
-      <div id="review-table-outer">
         <div id="review-table">
           {finalReviewData && finalReviewData.length ? loaded() : loading()}
-
         </div>
       </div>
-    </div>
   );
 };
 

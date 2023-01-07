@@ -8,11 +8,11 @@
 /* FOOTER TOP STYLES */
 .footer-container {
     background-color:rgb(24,104,183);
-    width: 100vw;
+    width: auto;
     height: 100%;
     padding: 40px 30px 10px 30px;
     color: rgb(251,253,255);
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .footer-top {

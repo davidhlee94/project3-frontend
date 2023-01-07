@@ -24,20 +24,79 @@
     color: white;
     font-weight: bold;
 }
-#review-table-outer{
-    border: 1px solid red;
-    overflow: hidden;
-    margin-top: 10px;
-}
+
 #review-table{
-    height: 20em;
-    width: 1000em;
-    margin-top: 10px;
-    display: flex;
+    /* border: 1px solid red; */
+    height: 25em;
+    width: 100%;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: max-content;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#review-table::-webkit-scrollbar {
+    display: none;
 }
 #review{
-    overflow-x: scroll;
-    border: 1px solid red;
-    height: 100%;
-    width: 20em;
+    border: 2px solid black;
+    height: 24em;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: white;
 }
+#review-image{
+    height: 150px;
+    border-radius: 50%;
+    border: 2px solid black;
+    margin: 10px;;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1em;
+    width: 50%;
+}
+#review-bubble-text{
+    border-radius: 10px;
+    border: 2px solid black;
+    margin: 10px;
+    height: 12em;
+    text-align: center;
+}
+
+@media only screen and (min-width: 1800px){
+    #review-table{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    }
+}
+@media only screen and (max-width: 1800px){
+    #review-table{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+    }
+}
+@media only screen and (max-width: 1550px){
+    #review-table{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr  ;
+    }
+}
+@media only screen and (max-width: 1300px){
+    #review-table{
+        grid-template-columns: 1fr 1fr 1fr 1fr   ;
+    }
+}
+@media only screen and (max-width: 1000px){
+    #review-table{
+        grid-template-columns: 1fr 1fr 1fr ;
+    }
+}
+@media only screen and (max-width: 700px){
+    #review-table{
+        grid-template-columns: 1fr 1fr ;
+    }
+}
+@media only screen and (max-width: 500px){
+    #review-table{
+        grid-template-columns: 1fr  ;
+    }
+}
+

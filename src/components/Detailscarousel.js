@@ -68,12 +68,13 @@ function Detailscarousel() {
         },
       };
   return (
-    
+    <div id="nft-similar">
         <Carousel 
         autoPlay={true}
         autoPlaySpeed={3000}
         responsive={responsive}
         infinite={true}
+        
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         >
@@ -95,6 +96,8 @@ function Detailscarousel() {
                 )
             })} 
         </Carousel>
+
+    </div>
     
   )
 }

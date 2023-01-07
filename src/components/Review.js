@@ -1,21 +1,45 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router";
+import Modal from "react-bootstrap/Modal";
 
 const Review = ({ reviewData, nftId }) => {
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-  const [show, setShow] = useState(false);
-  const [trigger, setTrigger] = useState(false);
-  const [review, setReview] = useState(null);
   const [newForm, setNewForm] = useState({
     rating: "",
     content: "",
   });
+  const [show, setShow] = useState(false);
+  const handleClose = () => {
+    setShow(false);
+    window.location.reload();
+  };
+  const handleShow = () => setShow(true);
 
+  const [finalReviewData, setFinalReviewData] = useState(null);
   const createReviewURL = `https://dbl-project-3-backend.herokuapp.com/nft/${nftId}/add-review`;
 
-  const createReview = async (reviewData) => {
+  async function getReviewData() {
+    console.log("review array", reviewData);
+    let arrayData = [];
+    reviewData.forEach(async (id) => {
+      try {
+        const response = await fetch(
+          `https://dbl-project-3-backend.herokuapp.com/review/${id}`
+        );
+        const data = await response.json();
+        console.log("review object", data);
+        arrayData.push(data);
+        Promise.all(arrayData).then(
+          setTimeout(() => {
+            setFinalReviewData(arrayData);
+          }, 300)
+        );
+      } catch (error) {
+        console.log(error);
+      }
+    });
+  }
+
+  async function createReview(reviewData) {
     try {
       await fetch(createReviewURL, {
         method: "PUT",
@@ -27,7 +51,7 @@ const Review = ({ reviewData, nftId }) => {
     } catch (error) {
       console.log(error);
     }
-  };
+  }
 
   const handleChange = (e) => {
     setNewForm({ ...newForm, [e.target.name]: e.target.value });
@@ -43,46 +67,6 @@ const Review = ({ reviewData, nftId }) => {
     });
     console.log("submitted");
   };
-  const [finalReviewData, setFinalReviewData] = useState(null);
-  // const reviewDataArray = [];
-
-  // async function getReviewData() {
-  //   for (let i = 1; i < reviewData.length; i++) {
-  //     const reviewURL = `https://dbl-project-3-backend.herokuapp.com/review/${reviewData[i]}`;
-  //     reviewData.push(fetch(reviewURL).then((response) => response.json()));
-  //   }
-
-  //   Promise.all(reviewDataArray).then((data) => {
-  //     const ratingReview = data.map((reviewDataArray) => ({
-  //       rating: reviewData.rating,
-  //       content: reviewData.content
-  //     }))
-  //     setFinalReviewData(ratingReview);
-  //   });
-  // }
-
-  async function getReviewData() {
-    console.log("review array", reviewData);
-    let tempArray = [];
-    reviewData.forEach(async (id) => {
-      try {
-        const response = await fetch(
-          `https://dbl-project-3-backend.herokuapp.com/review/${id}`
-        );
-        const data = await response.json();
-        console.log("review object", data);
-        tempArray.push(data);
-      } catch (error) {
-        console.log(error);
-      }
-    });
-    setFinalReviewData(tempArray);
-  }
-
-  useEffect(() => {
-    getReviewData();
-  }, []);
-  console.log("loop complete", finalReviewData);
 
   const loaded = () => {
     return finalReviewData.map((data) => (
@@ -96,6 +80,12 @@ const Review = ({ reviewData, nftId }) => {
   const loading = () => {
     <div>Reviews Loading...</div>;
   };
+
+  useEffect(() => {
+    getReviewData();
+  }, []);
+
+  console.log("loop complete", finalReviewData);
 
   return (
     <div>
@@ -126,18 +116,18 @@ const Review = ({ reviewData, nftId }) => {
               type="submit"
               value="Create Review"
               className="button"
-              // onClick={() => {
-              //   handleShow();
-              // }}
+              onClick={() => {
+                handleShow();
+              }}
             />
           </div>
-          {/* <Modal className="modal" show={show} onHide={handleClose}>
-        <h1 className="modal-text">Congratulations!</h1>
-        <h1 className="modal-text">You've just added a Review!</h1>
-      </Modal> */}
+          <Modal className="modal" show={show} onHide={handleClose}>
+            <h1 className="modal-text">Congratulations!</h1>
+            <h1 className="modal-text">You've just added a Review!</h1>
+          </Modal>
         </form>
       </div>
-      <p>reviews component should be here{finalReviewData && finalReviewData.length ? loaded() : loading()}</p>
+      {finalReviewData && finalReviewData.length ? loaded() : loading()}
     </div>
   );
 };

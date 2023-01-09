@@ -28,7 +28,7 @@ const Home = () => {
         <h1 className="top-heading">Explore, collect, and sell NFTs</h1>
         <HomeCarousel carouselData={homeData} />
         <HomeTable tableData={homeData} />
-        <Footer />
+        {/* <Footer /> */}
       </Container>
     );
   };

@@ -4,13 +4,10 @@ import Accordion from "react-bootstrap/Accordion";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { Tooltip } from "react-tooltip";
-import { Link } from "react-router-dom";
-import Modal from "react-bootstrap/Modal";
 import "react-tooltip/dist/react-tooltip.css";
 import Barchart from "../components/Barchart";
 import Detailscarousel from "../components/Detailscarousel";
 import Review from "../components/Review";
-import Footer from "../components/footer/Footer";
 
 const Details = () => {
   const [nft, setNFT] = useState(null);
@@ -23,7 +20,6 @@ const Details = () => {
     );
     const data = await response.json();
     setNFT(data);
-    console.log("this is displayDetails() data", data);
   }
   useEffect(() => {
     displayDetails();
@@ -39,25 +35,6 @@ const Details = () => {
       </>
     );
   }
-  const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5,
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3,
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2,
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1,
-    },
-  };
   return (
     <div className="main-container">
       <div className="left-side">
@@ -130,9 +107,6 @@ const Details = () => {
       </div>
       <div className="display-similar">
         <Detailscarousel />
-      </div>
-      <div id="footer-container">
-        <Footer/> 
       </div>
     </div>
   );

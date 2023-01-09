@@ -68,6 +68,7 @@ function Detailscarousel() {
       };
   return (
     <div id="nft-similar">
+      <h3 className="featured-text">Other Featured NFTs</h3>
         <Carousel 
         autoPlay={true}
         autoPlaySpeed={3000}

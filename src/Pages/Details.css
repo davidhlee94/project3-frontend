@@ -7,7 +7,8 @@
     margin-top: 50px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr .2fr .5fr .2fr ;
+    grid-template-rows: 1fr .5fr .2fr ;
+    padding-top: 50px;
 }
 .right-side{
     height: auto;
@@ -177,15 +178,20 @@ span{
     color:  grey;
     text-align: right;
     margin: 0;
-    padding-top: 5px;
     text-decoration: none;
-    padding-right: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
 }
 #icon-piece{
     font-size: xx-large;
     text-decoration: none;
     color: black;
     text-align: right;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
 }
 #tooltip{
     position: absolute;

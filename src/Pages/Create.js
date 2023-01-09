@@ -70,9 +70,17 @@ const Create = () => {
           <div className="nft-image-container">
             <img className="nft-image" src={nft.image} alt={nft.assetName} />
           </div>
-          <h3 className="nft-price">Price: {nft.price}</h3>
-          <h3 className="nft-username">Username: {nft.userName}</h3>
-          <h3 className="nft-username">description: {nft.description}</h3>
+          <div className="nft-creation-info">
+            <h3 className="nft-creation-title">
+              Price: <p className="just-text">${nft.price}</p>
+            </h3>
+            <h3 className="nft-creation-title">
+              Username: <p className="just-text">{nft.userName}</p>
+            </h3>
+            <h3 className="nft-creation-title">
+              Description: <p className="just-text">{nft.description}</p>
+            </h3>
+          </div>
         </Link>
       </div>
     );
@@ -90,7 +98,9 @@ const Create = () => {
 
   return (
     <div>
-      <h2>Create an NFT below.</h2>
+      <div className="create-title-container">
+        <h2 className="create-title">Create an NFT</h2>
+      </div>
       <div className="input-form-container">
         <div className="input-title-container"></div>
         <div className="form-container">
@@ -98,6 +108,7 @@ const Create = () => {
             <div className="username-container">
               <p className="input-title">Username:</p>
               <input
+                className="input-field"
                 type="text"
                 value={newForm.userName}
                 name="userName"
@@ -108,6 +119,7 @@ const Create = () => {
             <div className="assetName-container">
               <p className="input-title">NFT Name:</p>
               <input
+                className="input-field"
                 type="text"
                 value={newForm.assetName}
                 name="assetName"
@@ -118,6 +130,7 @@ const Create = () => {
             <div className="image-container">
               <p className="input-title">Image URL:</p>
               <input
+                className="input-field"
                 type="text"
                 value={newForm.image}
                 name="image"
@@ -128,6 +141,7 @@ const Create = () => {
             <div className="price-container">
               <p className="input-title">Price:</p>
               <input
+                className="input-field"
                 type="text"
                 value={newForm.price}
                 name="price"
@@ -137,11 +151,13 @@ const Create = () => {
             </div>
             <div className="description-container">
               <p className="input-title">Description:</p>
-              <input
+              <textarea
+                className="input-field"
                 type="text"
                 value={newForm.description}
                 name="description"
                 placeholder="Description"
+                rows={10}
                 onChange={handleChange}
               />
             </div>
@@ -154,12 +170,26 @@ const Create = () => {
                   handleShow(trigger);
                 }}
               />
+              <Modal className="modal" show={show} onHide={handleClose}>
+                <h1 className="modal-text">Congratulations!</h1>
+                <h1 className="modal-text">You've just created an NFT!</h1>
+                {nft ? loaded() : loading()}
+              </Modal>
             </div>
-            <Modal className="modal" show={show} onHide={handleClose}>
-              <h1 className="modal-text">Congratulations!</h1>
-              <h1 className="modal-text">You've just created an NFT!</h1>
-              {nft ? loaded() : loading()}
-            </Modal>
+            <div className="images-displayed">
+              <img
+                className="create-displayed-image"
+                src="https://i.seadn.io/gae/so5wpgp3r45HujDF1M-IIPBqy28bTEiWBIjuKWj_JCUgdaUGo4k9u759EbmyyChxSzqV-HYE2OZyP4mtzw44mUicl1k4gvAYJrCM4Q?auto=format&w=1000"
+              />
+              <img
+                className="create-displayed-image"
+                src="https://i.seadn.io/gcs/files/38f03ff8bef94db70cca9ed311fb408c.png?auto=format&w=1920"
+              />
+              <img
+                className="create-displayed-image"
+                src="https://i.seadn.io/gcs/files/f661d58b7c429653abe325d065d3d428.jpg?auto=format&w=1000"
+              />
+            </div>
           </form>
         </div>
       </div>

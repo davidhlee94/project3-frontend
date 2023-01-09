@@ -1,5 +1,6 @@
 import "react-multi-carousel/lib/styles.css";
 import Carousel from "react-multi-carousel";
+import { Link } from "react-router-dom";
 
 const HomeCarousel = ({ carouselData }) => {
   const responsive = {
@@ -49,22 +50,25 @@ const HomeCarousel = ({ carouselData }) => {
       infinite={true}
       containerClass="carousel-container"
       removeArrowOnDeviceType={["tablet", "mobile"]}
+      itemClass="carousel-item-padding-40-px"
     >
       {carouselData !== [] ? (
         carouselData.map((item, idx) => {
           return (
-            <div
-              className="carousel-card"
-              key={idx}
-              style={{
-                backgroundImage: `url(${item.image})`,
-              }}
-            >
-              <div className="carousel-card-text">
-                <h5>{item.assetName}</h5>
-                <p>Floor: {item.price} USD</p>
+            <Link to={`/nft/${item._id}`} className="carousel-card-link">
+              <div
+                className="carousel-card"
+                key={idx}
+                style={{
+                  backgroundImage: `url(${item.image})`,
+                }}
+              >
+                <div className="carousel-card-text">
+                  <h5>{item.assetName}</h5>
+                  <p>Floor: {item.price} USD</p>
+                </div>
               </div>
-            </div>
+            </Link>
           );
         })
       ) : (

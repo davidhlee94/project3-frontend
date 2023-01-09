@@ -20,10 +20,18 @@
     background: -webkit-linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
     background: -moz-linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
     background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
-    -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
+.navbar-brand {
+    background: #A7CFDF;
+    background: -webkit-linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    background: -moz-linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 /* TOP BACK GRAD */
 /* .top-heading {
     background: rgb(237,253,252);
@@ -32,21 +40,34 @@ background: linear-gradient(305deg, rgba(237,253,252,1) 6%, rgba(241,231,254,1) 
 
 /* CAROUSEL STYLES */
 .carousel-container{
-  padding: 40px 30px 50px 30px;
+  padding: 30px 30px 40px 30px;
 }
+
+.carousel-card-link {
+    text-decoration: none;
+}
+
 .carousel-card {
     height: 22rem;
     width: 22rem;
     border-radius: 12px;
     background-position: center;
     background-size: cover;
-    transition: all 0.5s;
+    object-fit: cover;
     overflow: hidden;
+    margin-right: 15px;
+    transition: all ease-in 10s;
 }
 
 .carousel-card:hover {
-   background-size: contain;
-   transform: scale(1.08);
+    height: 22rem;
+    width: 22rem;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    object-fit: cover;
+    background-size: 108% 108%;
+    transform: scale(1.05);
 }
 
 .carousel-card-text {
@@ -106,6 +127,7 @@ th {
 }
 
 .table-image {
+    object-fit: cover;
     border-radius: 12px;
     width: 5rem;
     height: 5rem;

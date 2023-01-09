@@ -1,4 +1,3 @@
-
 import React from "react";
 import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
@@ -73,16 +72,16 @@ const Review = ({ reviewData, nftId }) => {
 
   const loaded = () => {
     return finalReviewData.map((data) => (
-          <div key={data._id} className="each-review">
-            <div className="user-rating">
-              <p className="user-rating-text">User Rating:</p>
-              <p className="user-rating-text-2">{data.rating}/5 Stars</p>
-            </div>
-            <div className="review-description">
-              <p className="review-description-text">Review Description: </p>
-              <p className="review-description-text-2">{data.content}</p>
-            </div>
-          </div>
+      <div key={data._id} className="each-review">
+        <div className="user-rating">
+          <p className="user-rating-text">User Rating:</p>
+          <p className="user-rating-text-2">{data.rating}/5 Stars</p>
+        </div>
+        <div className="review-description">
+          <p className="review-description-text">Review Description: </p>
+          <p className="review-description-text-2">{data.content}</p>
+        </div>
+      </div>
     ));
   };
 
@@ -161,11 +160,10 @@ const Review = ({ reviewData, nftId }) => {
         <h4>Anonymous Reviews</h4>
       </div>
       <div id="review-container">
-        {finalReviewData && finalReviewData.length ? loaded() : loading()}  
+        {finalReviewData && finalReviewData.length ? loaded() : loading()}
       </div>
     </div>
   );
 };
 
 export default Review;
-

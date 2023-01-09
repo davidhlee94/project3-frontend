@@ -93,11 +93,13 @@
   padding-right: 5px;
   margin-top: 8px;
   margin-bottom: 8px;
+  width: 90vw;
 }
 
 .review-description-text,
 .user-rating-text {
   font-weight: 600;
+  width: 10vw;
 }
 
 .review-description {

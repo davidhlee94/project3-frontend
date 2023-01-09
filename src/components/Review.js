@@ -153,7 +153,7 @@ const Review = ({ reviewData, nftId }) => {
                 width="500"
               />
               <p className="click-anywhere">
-                (Click off anywhere to exit pop up)
+                (Click off anywhere to exit pop up!)
               </p>
             </div>
           </Modal>

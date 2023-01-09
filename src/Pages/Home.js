@@ -3,7 +3,6 @@ import { useState, useEffect } from "react";
 import Container from "react-bootstrap/Container";
 import HomeCarousel from "../components/Carousel";
 import HomeTable from "../components/HomeTable";
-import Footer from "../components/footer/Footer";
 
 const Home = () => {
   const [homeData, setHomeData] = useState([]);

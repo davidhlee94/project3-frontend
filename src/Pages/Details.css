@@ -3,7 +3,7 @@
 .main-container{
     /* border: 1px solid black; */
     height: 80em;
-    margin: 0;
+    /* padding: 0 10em; */
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr 1fr;
@@ -216,7 +216,8 @@ span{
 
 @media only screen and (max-width: 850px){
     .main-container{
-        display: block;  
+        display: block; 
+        margin: 5px; 
     }
     .nft{
         object-fit: cover;

@@ -8,11 +8,11 @@
 /* FOOTER TOP STYLES */
 .footer-container {
     background-color:rgb(24,104,183);
-    width: 100vw;
+    width: auto;
     height: 100%;
     padding: 40px 30px 10px 30px;
     color: rgb(251,253,255);
-    text-decoration: none;
+    text-decoration: none; 
 }
 
 .footer-top {
@@ -27,7 +27,7 @@
 }
 
 .footer-top-input {
-    width: 25rem;
+    width: auto;
     height: 3rem;
     border-radius: 8px;
 }
@@ -41,6 +41,11 @@
     background-color: #2081E2;
     color: white;
     font-family: 'Rubik', sans-serif;
+}
+
+.footer-top-button:hover {
+    transition: .3;
+    filter: opacity(.8);
 }
 
 .community-text {

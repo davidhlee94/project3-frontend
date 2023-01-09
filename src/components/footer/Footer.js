@@ -32,16 +32,24 @@ const Footer = () => {
           <h2>Join the Community</h2>
           <Row>
             <Col>
-              <a href="/">
+              <a
+                href="https://www.facebook.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faFacebook} className="footer-icon" />
               </a>
-              <a href="/">
+              <a
+                href="https://www.instagram.com/"
+                target="_blank"
+                rel="noreferrer"
+              >
                 <FontAwesomeIcon icon={faInstagram} className="footer-icon" />
               </a>
-              <a href="/">
+              <a href="https://twitter.com/" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faTwitter} className="footer-icon" />
               </a>
-              <a href="/">
+              <a href="https://www.twitch.tv" target="_blank" rel="noreferrer">
                 <FontAwesomeIcon icon={faTwitch} className="footer-icon" />
               </a>
             </Col>
@@ -60,8 +68,8 @@ const Footer = () => {
                 <h4>NiFT</h4>
                 <p>
                   The world’s second and smallest digital marketplace for crypto
-                  collectibles and non-fungible tokens (NFTs). Browse, review, and
-                  discover exclusive digital items.
+                  collectibles and non-fungible tokens (NFTs). Browse, review,
+                  and discover exclusive digital items.
                 </p>
               </Col>
             </Row>

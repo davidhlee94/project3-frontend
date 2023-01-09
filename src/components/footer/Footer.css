@@ -27,15 +27,21 @@
 }
 
 .footer-top-input {
-    width: auto;
+    width: 70%;
     height: 3rem;
     border-radius: 8px;
+    margin: 10px;
+}
+
+.footer-top-input::placeholder {
+    font-size: 1rem;
+    text-align: center;
 }
 
 .footer-top-button {
     width: 8rem;
     height: 3rem;
-    margin: 0 10px 0 10px;
+    /* margin: 0 10px 0 10px; */
     border-radius: 8px;
     border: none;
     background-color: #2081E2;

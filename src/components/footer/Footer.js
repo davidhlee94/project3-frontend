@@ -71,55 +71,115 @@ const Footer = () => {
             <Row>
               <Col>
                 <h5>David</h5>
-                <a href="/" className="footer-link">
+                <a
+                  href="https://github.com/davidhlee94"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   GitHub
                 </a>
                 <br />
-                <a href="/" className="footer-link">
+                <a
+                  href="https://www.linkedin.com/in/iamdavidhanlee/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   LinkedIn
                 </a>
                 <br />
-                <a href="/" className="footer-link">
+                <a
+                  href="https://www.facebook.com/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   FaceBook
                 </a>
                 <br />
-                <a href="/" className="footer-link">
+                <a
+                  href="https://twitter.com/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Twitter
                 </a>
               </Col>
               <Col>
                 <h5>Barezi</h5>
-                <a href="/" className="footer-link">
+                <a
+                  href="https://github.com/easybarezi20"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   GitHub
                 </a>
                 <br />
-                <a href="/" className="footer-link">
+                <a
+                  href="https://www.linkedin.com/in/barezi-morales/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   LinkedIn
                 </a>
                 <br />
-                <a href="/" className="footer-link">
+                <a
+                  href="https://www.facebook.com/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   FaceBook
                 </a>
                 <br />
-                <a href="/" className="footer-link">
+                <a
+                  href="https://twitter.com/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Twitter
                 </a>
               </Col>
               <Col>
                 <h5>Luigi</h5>
-                <a href="/" className="footer-link">
+                <a
+                  href="https://github.com/luigibustos"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   GitHub
                 </a>
                 <br />
-                <a href="/" className="footer-link">
+                <a
+                  href="https://www.linkedin.com/in/luigibustos/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   LinkedIn
                 </a>
                 <br />
-                <a href="/" className="footer-link">
+                <a
+                  href="https://www.facebook.com/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   FaceBook
                 </a>
                 <br />
-                <a href="/" className="footer-link">
+                <a
+                  href="https://twitter.com/"
+                  className="footer-link"
+                  target="_blank"
+                  rel="noreferrer"
+                >
                   Twitter
                 </a>
               </Col>

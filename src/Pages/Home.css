@@ -1,9 +1,29 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
-/* HOME PAGE HEADING */
+
+/* HOME PAGE */
+
+.navbar {
+    background: transparent;
+    margin-bottom: 50px;
+}
+
+.navbar-active {
+    transition: ease-in;
+    background-color: white;
+    border-bottom: 1px solid lightgrey;
+}
 
 .home-page {
     font-family: 'Poppins', sans-serif;
+}
+
+.home-bg {
+    padding-top: 50px;
+    background: rgb(211,247,243);
+    background: 
+        linear-gradient(180deg, rgba(255,0,0,0) 0%, rgba(255,255,255,1) 80%),
+        linear-gradient(82deg, rgba(211,247,243,1) 0%, rgba(220,226,252,1) 21%, rgba(197,222,248,1) 46%, rgba(208,233,250,1) 81%, rgba(229,213,247,1) 100%);
 }
 
 .top-heading {
@@ -11,17 +31,19 @@
     font-size: 3rem;
     text-align: center;
     padding: 40px;
+    margin: 0;
 
 }
 
 /* HEADER TEXT GRAD */
 .top-heading {
     background: #A7CFDF;
-    background: -webkit-linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
-    background: -moz-linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
-    background: linear-gradient(to right, #A7CFDF 0%, #23538A 100%);
+    background: -webkit-linear-gradient(to right, #95c3d5 0%, #23538A 100%);
+    background: -moz-linear-gradient(to right, #95c3d5 0%, #23538A 100%);
+    background: linear-gradient(to right, #95c3d5 0%, #23538A 100%);
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    /* text-shadow: lightgray 2px 1px 3px;; */
 }
 
 .navbar-brand {
@@ -32,11 +54,6 @@
     background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-/* TOP BACK GRAD */
-/* .top-heading {
-    background: rgb(237,253,252);
-background: linear-gradient(305deg, rgba(237,253,252,1) 6%, rgba(241,231,254,1) 26%, rgba(213,236,253,1) 53%, rgba(226,243,254,1) 72%, rgba(241,231,254,1) 100%);
-} */
 
 /* CAROUSEL STYLES */
 .carousel-container{
@@ -81,7 +98,6 @@ background: linear-gradient(305deg, rgba(237,253,252,1) 6%, rgba(241,231,254,1) 
     background-size: cover;
     color: white;
     border-radius: inherit;
-    /* padding: 20px; */
 }
 
 .carousel-card-text h5 {
@@ -107,7 +123,6 @@ background: linear-gradient(305deg, rgba(237,253,252,1) 6%, rgba(241,231,254,1) 
     font-size: 2rem;
     font-weight: bold;
     padding-bottom: 20px;
-    /* text-align: center; */
     color: #05111E;
     border-bottom: 2px solid #F2F4F5;
 }

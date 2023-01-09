@@ -4,10 +4,25 @@ import Navbar from "react-bootstrap/Navbar";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLaptopCode } from "@fortawesome/free-solid-svg-icons";
+import { useState } from "react";
 
 function Header() {
+  const [navBar, setNavBar] = useState(false);
+  const toggleBackground = () => {
+    if (window.scrollY >= 40) {
+      setNavBar(true);
+    } else {
+      setNavBar(false);
+    }
+  };
+
+  window.addEventListener("scroll", toggleBackground);
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar
+      expand="lg"
+      fixed="top"
+      className={navBar ? "navbar-active" : "navbar"}
+    >
       <Container>
         <Navbar.Brand href="/">
           <FontAwesomeIcon

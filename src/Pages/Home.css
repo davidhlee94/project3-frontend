@@ -172,3 +172,8 @@ th {
     display: flex;
     align-items: center;
 }
+@media only screen and (max-width: 991px){
+    .navbar{
+        background-color: white;
+    }
+}

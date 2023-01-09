@@ -42,7 +42,7 @@ const Details = () => {
           <p>{nft.assetName}</p>
         </div>
         <div className="image">
-          <p id="favorite">&#9825;</p>
+          <p id="favorite">&#9829;</p>
           <Tooltip anchorId="favorite" content="Favorite" place="bottom" />
           <div className="image-box">
             <img src={nft.image} key={nft.userName} className="nft" />

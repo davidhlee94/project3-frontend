@@ -84,7 +84,6 @@
     margin: 1em; 
 }
 .artist-collection {
-    /* border: 1px solid black; */
     display: grid;
     grid-template-columns: 2fr 1fr;
     text-align: left;
@@ -187,7 +186,6 @@ span{
 }
 #favorite{
     font-size: 25px;
-    /* border: 1px solid red; */
     width: 5%;
     margin: 0;
     margin-left: 5px;

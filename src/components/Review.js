@@ -1,6 +1,7 @@
 import React from "react";
 import { useState, useEffect } from "react";
 import Modal from "react-bootstrap/Modal";
+import "./Review.css";
 
 const Review = ({ reviewData, nftId }) => {
   const [newForm, setNewForm] = useState({
@@ -70,9 +71,15 @@ const Review = ({ reviewData, nftId }) => {
 
   const loaded = () => {
     return finalReviewData.map((data) => (
-      <div key={data._id}>
-        <p>{data.rating}</p>
-        <p>{data.content}</p>
+      <div key={data._id} className="each-review">
+        <div className="user-rating">
+          <p className="user-rating-text">User Rating:</p>
+          <p className="user-rating-text-2">{data.rating}/5 Stars</p>
+        </div>
+        <div className="review-description">
+          <p className="review-description-text">Review Description: </p>
+          <p className="review-description-text-2">{data.content}</p>
+        </div>
       </div>
     ));
   };
@@ -92,26 +99,32 @@ const Review = ({ reviewData, nftId }) => {
       <div>
         <form onSubmit={handleSubmit}>
           <div className="">
-            <p className="">Rating</p>
-            <input
-              type="text"
-              value={newForm.rating}
-              name="rating"
-              placeholder="Rating"
-              onChange={handleChange}
-            />
+            <label className="rating-label">
+              Rating:
+              <input
+                value={newForm.rating}
+                name="rating"
+                onChange={handleChange}
+                max="5"
+                step="1"
+                type="range"
+                className="rating rating--nojs"
+                oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+              />
+            </label>
           </div>
           <div className="">
-            <p className="">Review</p>
-            <input
+            <p className="">Review:</p>
+            <textarea
               type="text"
               value={newForm.content}
               name="content"
               placeholder="Review"
               onChange={handleChange}
+              className="review-input-field"
             />
           </div>
-          <div className="button-container">
+          <div className="review-button-container">
             <input
               type="submit"
               value="Create Review"
@@ -121,11 +134,31 @@ const Review = ({ reviewData, nftId }) => {
               }}
             />
           </div>
-          <Modal className="modal" show={show} onHide={handleClose}>
-            <h1 className="modal-text">Congratulations!</h1>
-            <h1 className="modal-text">You've just added a Review!</h1>
+          <Modal
+            size="lg"
+            aria-labelledby="contained-modal-title-vcenter"
+            centered
+            show={show}
+            onHide={handleClose}
+            className="rounded-lg"
+          >
+            <div
+              className="modal-text-image-container modal-content rounded"
+            >
+              <h1 className="modal-text">Thank you for submitting a review!</h1>
+              <img
+                className="thank-you-image"
+                src="https://media.tenor.com/rMn0aXhrK5sAAAAC/homer-simpson-whoo-hoo.gif"
+                height="auto"
+                width="500"
+              />
+              <p className="click-anywhere">
+                (Click off anywhere to exit pop up)
+              </p>
+            </div>
           </Modal>
         </form>
+        <h4>Anonymous Reviews</h4>
       </div>
       {finalReviewData && finalReviewData.length ? loaded() : loading()}
     </div>

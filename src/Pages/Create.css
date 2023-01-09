@@ -67,9 +67,9 @@
 
 .create-title {
   background: #a7cfdf;
-  background: -webkit-linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
-  background: -moz-linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
-  background: linear-gradient(to right, #a7cfdf 0%, #23538a 100%);
+  background: -webkit-linear-gradient(to right, #96C6D9 0%, #23538a 100%);
+  background: -moz-linear-gradient(to right, #96C6D9 0%, #23538a 100%);
+  background: linear-gradient(to right, #96C6D9 0%, #23538a 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   font-size: 50px;

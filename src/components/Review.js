@@ -33,7 +33,7 @@ const Review = ({ reviewData, nftId }) => {
         Promise.all(arrayData).then(
           setTimeout(() => {
             setFinalReviewData(arrayData);
-          }, 300)
+          }, 400)
         );
       } catch (error) {
         console.log(error);
@@ -72,16 +72,16 @@ const Review = ({ reviewData, nftId }) => {
 
   const loaded = () => {
     return finalReviewData.map((data) => (
-      <div key={data._id} className="each-review">
-        <div className="user-rating">
-          <p className="user-rating-text">User Rating:</p>
-          <p className="user-rating-text-2">{data.rating}/5 Stars</p>
-        </div>
-        <div className="review-description">
-          <p className="review-description-text">Review Description: </p>
-          <p className="review-description-text-2">{data.content}</p>
-        </div>
-      </div>
+          <div key={data._id} className="each-review">
+            <div className="user-rating">
+              <p className="user-rating-text">User Rating:</p>
+              <p className="user-rating-text-2">{data.rating}/5 Stars</p>
+            </div>
+            <div className="review-description">
+              <p className="review-description-text">Review Description: </p>
+              <p className="review-description-text-2">{data.content}</p>
+            </div>
+          </div>
     ));
   };
 
@@ -110,7 +110,7 @@ const Review = ({ reviewData, nftId }) => {
                 step="1"
                 type="range"
                 className="rating rating--nojs"
-                oninput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
+                onInput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
               />
             </label>
           </div>
@@ -159,7 +159,9 @@ const Review = ({ reviewData, nftId }) => {
         </form>
         <h4>Anonymous Reviews</h4>
       </div>
-      {finalReviewData && finalReviewData.length ? loaded() : loading()}
+      <div id="review-container">
+        {finalReviewData && finalReviewData.length ? loaded() : loading()}  
+      </div>
     </div>
   );
 };

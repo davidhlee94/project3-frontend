@@ -111,6 +111,14 @@
   margin-bottom: 5px;
   border-radius: 10px;
 }
+#review-container{
+    height: 28vh;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+#review-container::-webkit-scrollbar {
+    display: none;
+}
 
 .rating {
   background-color: #f2fbff;
@@ -138,7 +146,6 @@
 
 .review-button-container{
     display: flex;
-    margin-bottom: 50px;
 }
 
 .click-anywhere{

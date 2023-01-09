@@ -79,7 +79,7 @@ function Detailscarousel() {
         >
             {nft.slice(nft.length - 10).map((last) => {
                 return(
-                    <a href={`/nft/${last._id}`} className='carousel-card' id='link'>
+                    <a href={`/nft/${last._id}`} key= {last._id}className='carousel-card' id='link'>
                     <div  
                         className='carousel-card'
                         style={{

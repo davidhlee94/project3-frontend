@@ -18,8 +18,9 @@ const Footer = () => {
         <Col className="footer-top-text">
           <h2>Stay in the loop</h2>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua.{" "}
+            Join our mailing list to stay in the loop with our newest feature
+            releases, NFT drops, and tips and tricks for navigating NiFT. This
+            functionality isn't built out yet, so don't.
           </p>
           <input
             className="footer-top-input"
@@ -58,9 +59,9 @@ const Footer = () => {
                 />
                 <h4>NiFT</h4>
                 <p>
-                  Lorem ipsum is placeholder text commonly used in the graphic,
-                  print, and publishing industries for previewing layouts and
-                  visual mockups.
+                  The world’s second and smallest digital marketplace for crypto
+                  collectibles and non-fungible tokens (NFTs). Browse, review, and
+                  discover exclusive digital items.
                 </p>
               </Col>
             </Row>

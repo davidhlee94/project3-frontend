@@ -12,7 +12,6 @@ const Home = () => {
     try {
       const response = await fetch(URL);
       let data = await response.json();
-      //   console.log(data);
       setHomeData(data);
     } catch (error) {
       console.log(error);

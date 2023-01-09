@@ -6,9 +6,6 @@ import Create from "./Pages/Create";
 import Details from "./Pages/Details";
 import Footer from "./components/footer/Footer";
 
-
-
-
 function App() {
   return (
     <div className="App">
@@ -20,6 +17,7 @@ function App() {
           <Route path="/nft/:id" element={<Details />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }

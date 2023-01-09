@@ -97,7 +97,7 @@ const Create = () => {
   }, []);
 
   return (
-    <div>
+    <div style={{paddingTop: "50px"}}>
       <div className="create-title-container">
         <h2 className="create-title">Create an NFT</h2>
       </div>

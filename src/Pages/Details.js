@@ -38,7 +38,7 @@ const Details = () => {
   return (
     <div className="main-container">
       <div className="left-side">
-      <div className="asset-name">
+        <div className="asset-name">
           <p>{nft.assetName}</p>
         </div>
         <div className="image">
@@ -52,9 +52,9 @@ const Details = () => {
           </p>
           <div className="icon">
             <a href={`${nft.image}`} id="icon-piece">
-              &#x274F;
+              View Full NFT
             </a>
-            <Tooltip anchorId="icon-piece" content="Full Image"/>
+            <Tooltip anchorId="icon-piece" content="Full Image" />
           </div>
         </div>
       </div>
@@ -93,17 +93,15 @@ const Details = () => {
         </div>
       </div>
       <div id="reviews" className="artist-accordion-right">
-          <Accordion defaultActiveKey="0">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>&#x270E; Reviews</Accordion.Header>
-              <Accordion.Body className="listing-price-labels">
-                <Review 
-                reviewData={nft.reviews}
-                nftId={nft._id}
-                /><></>
-              </Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
+        <Accordion defaultActiveKey="0">
+          <Accordion.Item eventKey="0">
+            <Accordion.Header>&#x270E; Reviews</Accordion.Header>
+            <Accordion.Body className="listing-price-labels">
+              <Review reviewData={nft.reviews} nftId={nft._id} />
+              <></>
+            </Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
       </div>
       <div className="display-similar">
         <Detailscarousel />

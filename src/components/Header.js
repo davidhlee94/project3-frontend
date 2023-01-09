@@ -23,17 +23,21 @@ function Header() {
       fixed="top"
       className={navBar ? "navbar-active" : "navbar"}
     >
-      <Container>
+      <Container className="nav-container">
         <Navbar.Brand href="/">
           <FontAwesomeIcon
             icon={faLaptopCode}
             style={{ paddingRight: "10px" }}
+            className="navbar-brand-icon"
           />
-          <span>NiFT</span>
+          <span className="navbar-brand-text">NiFT</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
+        <Navbar.Collapse
+          className="navbar-collapse"
+          // id="basic-navbar-nav"
+        >
+          <Nav className="nav">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/create">Create</Nav.Link>
             <Nav.Link href="/">About</Nav.Link>

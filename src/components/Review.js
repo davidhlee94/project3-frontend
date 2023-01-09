@@ -8,6 +8,7 @@ const Review = ({ reviewData, nftId }) => {
   const [newForm, setNewForm] = useState({
     rating: "",
     content: "",
+    nft: nftId,
   });
   const [show, setShow] = useState(false);
   const handleClose = () => {

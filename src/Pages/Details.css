@@ -1,23 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
 .main-container{
-    /* border: 1px solid black; */
-    height: 80em;
-    margin: 5px;
+    height: auto;
+    padding-bottom: 50px;
+    margin: 10px;
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .5fr .2fr ;
+    padding-top: 50px;
+}
+.right-side{
+    height: auto;
+}
+.left-side{
+    height: auto;
+}
+.display-similar{
+    margin: 0 1em 0 4em;
+    grid-column: 1/3;
+}
+#reviews{
+    height: fit-content;
+    grid-column: 1/3;
+    margin: 0;
 }
 .price-panel{
     border: 1px solid rgb(205, 204, 204);
     border-radius: .5em;
-    
+    background-color: rgb(0, 174, 255,0.05);
 }
 .date-created{
     border: 1px solid rgb(205, 204, 204, .5);
     border-radius: .5em .5em 0 0;
-    padding: 10px;
+    padding: 20px;
     text-align: left;
     padding-left: 10px;
+    background-color: white;
 }
 .current-price{
     color: grey;
@@ -25,20 +43,17 @@
     text-align: left;
     padding-left: 10px;
 }
-.nft-price{
+#nft-price{
     font-weight: bolder;
     font-size: xx-large;
     justify-content: left;
+    align-items: left;
+    text-align: left;
     padding-left: 10px;
-}
-.image{
-    margin: 10px 60px;
-    height: auto;
-    max-height: 55em;
 }
 .details-description{
     border: 1px solid rgb(205, 204, 204);
-    margin: 10px 60px 0 ;
+    margin: 10px 0 0;
     height: 3em;
     text-align: left;
     font-size: 20px;
@@ -51,7 +66,6 @@
 }
 .details-artist{
     border: 1px solid rgb(205, 204, 204);
-    margin: 0 60px;
     height: 3em;
     text-align: left;
     font-size: 20px;
@@ -63,7 +77,6 @@
     margin-left: 1em;
 }
 .detail{
-    /* border: 1px solid black; */
     margin: 0 60px;
     height: fit-content;
     text-align: left;
@@ -72,12 +85,12 @@
     margin: 1em; 
 }
 .artist-collection {
-    /* border: 1px solid black; */
     display: grid;
     grid-template-columns: 2fr 1fr;
     text-align: left;
 }
 .artist-collection p{
+    padding-left: 20px;
     padding-top: 1em;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bolder;
@@ -86,8 +99,8 @@
 .asset-name{
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 50px;
-    font-weight: bolder;
-    text-align: left;
+    font-weight: 900;
+    text-align: center;
 }
 
 #dropdown-basic{
@@ -95,7 +108,7 @@
     color: black;
     width: 39em;
 }
-.artist-accordion{
+.artist-accordion-right{
     margin: 2em 0;
 }
 .details-button{
@@ -106,33 +119,101 @@
     border: none;
     width: 20em;
     margin: 2em 10px;
+    font-weight: bolder;
 }
 .nft{
     width: 100%;
     height: auto;
-    max-height: 55em;
+    max-height: 60em;
     min-height: 450px;
     min-width: 450px;
+}
+.image{
+    border: 2px solid rgb(205, 204, 204);
+    margin: 10px 20px;
+    height: auto;
+    max-height: 60em;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .accordion-button{
     font-size: 20px; 
     font-weight: bolder;
+    background-color: white !important;
+    color: black !important;
+}
+#accordion-button-left{
+    font-size: 20px; 
+    background-color: white !important;
+    color: black !important;
+    margin-top: 2em;
+    top: 10px;
 }
 
-.listing-price-labels{
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-}
 .grid-button{
     background-color: #2E8EEE;
     border-radius: 10px;
     border: none;
     color: white;
-
+    font-weight: bolder;
 }
 .grid-label{
     padding: 1em;
 }
 span{
     color: black;
+    font-weight: bolder;
+}
+.icon{
+    color:  grey;
+    text-align: right;
+    margin: 0;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+#icon-piece{
+    font-size: xx-large;
+    text-decoration: none;
+    color: black;
+    text-align: right;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+#tooltip{
+    position: absolute;
+    top: 15%;
+    background-color: #000;
+    color: #fff;
+}
+.grid-info{
+    padding: 16px;
+}
+#favorite{
+    font-size: 25px;
+    width: 2%;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+}
+#favorite:hover{
+    color: red;
+}
+.listing-price-labels ,.accordion-body{
+    background-color: rgb(0, 174, 255,0.05);
+
+}
+
+@media only screen and (max-width: 850px){
+    .main-container{
+        display: block; 
+        margin: 5px; 
+    }
+    .nft{
+        object-fit: cover;
+    }
 }

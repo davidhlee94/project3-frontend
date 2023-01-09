@@ -1,6 +1,9 @@
+import "./Home.css";
 import { useState, useEffect } from "react";
+import Container from "react-bootstrap/Container";
 import HomeCarousel from "../components/Carousel";
 import HomeTable from "../components/HomeTable";
+import Footer from "../components/footer/Footer";
 
 const Home = () => {
   const [homeData, setHomeData] = useState([]);
@@ -9,7 +12,6 @@ const Home = () => {
     try {
       const response = await fetch(URL);
       let data = await response.json();
-      //   console.log(data);
       setHomeData(data);
     } catch (error) {
       console.log(error);
@@ -21,10 +23,14 @@ const Home = () => {
 
   const loaded = () => {
     return (
-      <div>
-        <HomeCarousel carouselData={homeData} />
+      <Container fluid className="home-page">
+        <Container fluid className="home-bg">
+          <h1 className="top-heading">Explore, collect, and sell NFTs</h1>
+          <HomeCarousel carouselData={homeData} />
+        </Container>
         <HomeTable tableData={homeData} />
-      </div>
+        {/* <Footer /> */}
+      </Container>
     );
   };
 
@@ -32,12 +38,7 @@ const Home = () => {
     return <p>Loading...</p>;
   };
 
-  return (
-    <div>
-      <h1>Explore, collect, and sell NFTs</h1>
-      {homeData ? loaded() : loading()}
-    </div>
-  );
+  return homeData ? loaded() : loading();
 };
 
 export default Home;

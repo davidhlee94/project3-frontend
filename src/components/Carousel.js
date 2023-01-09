@@ -55,7 +55,11 @@ const HomeCarousel = ({ carouselData }) => {
       {carouselData !== [] ? (
         carouselData.map((item, idx) => {
           return (
-            <Link to={`/nft/${item._id}`} className="carousel-card-link">
+            <Link
+              to={`/nft/${item._id}`}
+              className="carousel-card-link"
+              key={idx}
+            >
               <div
                 className="carousel-card"
                 key={idx}

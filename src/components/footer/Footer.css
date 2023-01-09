@@ -43,6 +43,11 @@
     font-family: 'Rubik', sans-serif;
 }
 
+.footer-top-button:hover {
+    transition: .3;
+    filter: opacity(.8);
+}
+
 .community-text {
     text-align: center;
 }

@@ -14,7 +14,6 @@ function Detailscarousel() {
         const response = await fetch(`https://dbl-project-3-backend.herokuapp.com/nft`)
         const data = await response.json()
         setNFT(data)
-        console.log(data)
     }
     useEffect(() => {
         displayDetails()
@@ -68,12 +67,13 @@ function Detailscarousel() {
         },
       };
   return (
-    
+    <div id="nft-similar">
         <Carousel 
         autoPlay={true}
         autoPlaySpeed={3000}
         responsive={responsive}
         infinite={true}
+        
         containerClass="carousel-container"
         removeArrowOnDeviceType={["tablet", "mobile"]}
         >
@@ -95,6 +95,8 @@ function Detailscarousel() {
                 )
             })} 
         </Carousel>
+
+    </div>
     
   )
 }

@@ -44,7 +44,9 @@ const Details = () => {
         <div className="image">
           <p id="favorite">&#9825;</p>
           <Tooltip anchorId="favorite" content="Favorite" place="bottom" />
-          <img src={nft.image} key={nft.userName} className="nft" />
+          <div className="image-box">
+            <img src={nft.image} key={nft.userName} className="nft" />
+          </div>
         </div>
         <div className="artist-collection">
           <p>
@@ -80,6 +82,7 @@ const Details = () => {
           <h1 id="nft-price">{nft.price}$</h1>
           <button className="details-button">BUY NOW</button>
         </div>
+      </div>
         <div className="artist-accordion">
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0" id="accordion-button-left">
@@ -91,7 +94,6 @@ const Details = () => {
             </Accordion.Item>
           </Accordion>
         </div>
-      </div>
       <div id="reviews" className="artist-accordion-right">
           <Accordion defaultActiveKey="0">
             <Accordion.Item eventKey="0">

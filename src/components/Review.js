@@ -120,7 +120,7 @@ const Review = ({ reviewData, nftId }) => {
               type="text"
               value={newForm.content}
               name="content"
-              placeholder="Review"
+              placeholder="Type here..."
               onChange={handleChange}
               className="review-input-field"
             />

@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+<img width="auto" src="https://user-images.githubusercontent.com/112284075/211639715-6cdd3cd8-289d-4f0b-b9b2-d95dc14adac8.png" alt="coverpage">
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+# 👾 NiFT 👾
+#### By Barezi Moralex, Luigi Bustos, and David Lee
+###### [NiFT Website](link here)
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## ⭐ Getting Started ⭐
+Welcome to NiFT! NiFT is a online NFT library that allows users to browse, create, and buy unauthentic NFTs.<br>
+<br>
+The home page of NiFT showcases all the NiFTs created in a carousel, as well as trending and new NFTs listed at the bottom. On click of the selected NFT, users will be navigated to the details page which shows the price history, price, owner, about, and reviews.<br>
+<br>
+Users can also navigate to the Create page, which allows them to create an NFT to be featured on the page. NFT requirements consist of Username, NFT Name, Image URL, Price, and Description. 
 
-### `npm test`
+## 🖼️ Wireframe 🖼️
+##### Main Page
+###### The main page, where the user can view all the NFTs featured. 
+<img width="700" height="auto" src="https://user-images.githubusercontent.com/112284075/211636024-b2ad7fd0-2d1b-471e-b92d-629f8ad50a85.png" alt="mainpage">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##### NFT Details Page
+###### The NFT Details Page, where the user can view the details of the specific NFT they selected.
+<img width="700" height="auto" src="https://user-images.githubusercontent.com/112284075/211636274-01d3eb65-fd08-4934-94fb-99a48085a902.png" alt="mainpage">
 
-### `npm run build`
+###### The reviews section, where the user can leave a review or look at previous reviews left.
+<img width="700" height="auto" src="https://user-images.githubusercontent.com/112284075/211636463-d08a1d3e-8388-48e6-a9bf-9a1f9412546a.png" alt="mainpage">
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##### Create NFT Page
+###### The Create NFT Page, where the user can create an NFT to be featured on our website.
+<img width="700" height="auto" src="https://user-images.githubusercontent.com/112284075/211636636-8def8971-fddf-43d5-9b6d-a042144533f6.png" alt="mainpage">
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## 🚀 Technologies Used 🚀
 
-### `npm run eject`
+![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Express.js](https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+![React](https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+![NodeJS](https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+![Bootstrap](https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white)
 
-## Learn More
+![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![CSS3](https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
 
-### Code Splitting
+![Netlify](https://img.shields.io/badge/netlify-%23000000.svg?style=for-the-badge&logo=netlify&logoColor=#00C7B7)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Heroku](https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white)
 
-### Analyzing the Bundle Size
+## 🤔 Why a NFT Library? 🤔
+Project 3 challenged us to clone an exsiting website using a React application that included a frontend and a backend. As a group, we really enjoyed animations and art, so we thought it would be a good opportunity to create a repository for that. All the members in our group have experience in either NFT or cryptocurrencies so deciding to clone OpenSea was an easy decision. This project challenged us to take the project one step at a time, understanding how the backend works, and how to implement functionalities on the page.<br><br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+When building this project, we were able to: <br>
 
-### Making a Progressive Web App
+✅ Create a React app that houses NFTs<br>
+✅ Allow users to create an NFT that is displayed on our page<br>
+✅ Solidify our understanding of backend databases<br>
+✅ Sharpen our React skills<br><br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## ⏭️ Whats next? ⏭️
+Here are a few stretch goals we look to accomplish in the future:<br>
 
-### Advanced Configuration
+📄 User authentication<br>
+📄 Create NFT Collections<br>
+<br>
+## 🔨 Built By 🔨
+#### Barezi Morales 
+<p>
+    <a href="https://github.com/easybarezi20" rel="nofollow noreferrer">
+    <img width="20" height="auto"src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Github-Dark.svg" alt="github"> Github
+  </a>
+  <br>
+  <a href="https://www.linkedin.com/in/barezi-morales/" rel="nofollow noreferrer">
+    <img width="20" height="auto" src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+  </a>
+<p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#### David Lee
+<p>
+    <a href="https://github.com/davidhlee94" rel="nofollow noreferrer">
+    <img width="20" height="auto"src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Github-Dark.svg" alt="github"> Github
+  </a>
+  <br>
+  <a href="https://www.linkedin.com/in/iamdavidhanlee" rel="nofollow noreferrer">
+    <img width="20" height="auto" src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+  </a>
+<p>
 
-### Deployment
+#### Luigi Bustos
+  
+  <p>
+    <a href="https://github.com/luigibustos" rel="nofollow noreferrer">
+    <img width="20" height="auto"src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Github-Dark.svg" alt="github"> Github
+  </a>
+  <br>
+  <a href="https://www.linkedin.com/in/luigibustos/" rel="nofollow noreferrer">
+    <img width="20" height="auto" src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+  </a>
+<p>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## 🙏 Thank you for reading! 🙏
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

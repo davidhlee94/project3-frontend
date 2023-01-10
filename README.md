@@ -57,7 +57,8 @@ Users can also navigate to the Create page, which allows them to create an NFT t
 ## 🤔 Why a NFT Library? 🤔
 Project 3 challenged us to clone an exsiting website using a React application that included a frontend and a backend. As a group, we really enjoyed animations and art, so we thought it would be a good opportunity to create a repository for that. All the members in our group have experience in either NFT or cryptocurrencies so deciding to clone OpenSea was an easy decision. This project challenged us to take the project one step at a time, understanding how the backend works, and how to implement functionalities on the page.<br><br>
 
-When building this project, we were able to:<br>
+When building this project, we were able to: <br>
+
 ✅ Create a React app that houses NFTs<br>
 ✅ Allow users to create an NFT that is displayed on our page<br>
 ✅ Solidify our understanding of backend databases<br>

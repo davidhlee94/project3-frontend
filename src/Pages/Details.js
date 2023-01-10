@@ -12,7 +12,9 @@ import Owner from "../components/Owner";
 
 const Details = () => {
   const [nft, setNFT] = useState(null);
-    const [ owner, setOwner ] = useState('')
+  const [favorite, setFavorite] = useState(false);
+
+  const [owner, setOwner] = useState("");
   const { id } = useParams();
 
   async function displayDetails() {
@@ -43,7 +45,14 @@ const Details = () => {
           <p>{nft.assetName}</p>
         </div>
         <div className="image">
-          <p id="favorite">&#9829;</p>
+          <p
+            id={favorite ? "favorite-active" : "favorite"}
+            onClick={() => {
+              setFavorite(!favorite);
+            }}
+          >
+            &#9829;
+          </p>
           <Tooltip anchorId="favorite" content="Favorite" place="bottom" />
           <div className="image-box">
             <img src={nft.image} key={nft.userName} className="nft" />
@@ -81,20 +90,17 @@ const Details = () => {
           </div>
           <p className="current-price">Current Price</p>
           <h1 id="nft-price">{nft.price}$</h1>
-          <Owner nftID={nft._id} reviewData={nft}/>
+          <Owner nftID={nft._id} reviewData={nft} />
         </div>
       </div>
-        <div className="artist-accordion">
-          <Accordion defaultActiveKey="0">
-            <Accordion.Item eventKey="0" id="accordion-button-left">
-              <Accordion.Header>
-                {" "}
-                &#8801; About {nft.assetName}
-              </Accordion.Header>
-              <Accordion.Body>{nft.description}</Accordion.Body>
-            </Accordion.Item>
-          </Accordion>
-        </div>
+      <div className="artist-accordion">
+        <Accordion defaultActiveKey="0">
+          <Accordion.Item eventKey="0" id="accordion-button-left">
+            <Accordion.Header> &#8801; About {nft.assetName}</Accordion.Header>
+            <Accordion.Body>{nft.description}</Accordion.Body>
+          </Accordion.Item>
+        </Accordion>
+      </div>
       <div id="reviews" className="artist-accordion-right">
         <Accordion defaultActiveKey="0">
           <Accordion.Item eventKey="0">

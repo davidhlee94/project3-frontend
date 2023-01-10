@@ -216,12 +216,16 @@
     display: block;
   }
   .input-field{
-    text-align: center;
+    text-align: left;
   }
   .images-displayed{
     text-align: center;
   }
   .create-title{
     padding-top: 50px;
+  }
+  .nft-image{
+    height: auto;
+    width: 100%;
   }
 }

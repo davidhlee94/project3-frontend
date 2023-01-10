@@ -163,4 +163,8 @@
   .user-rating, .review-description{
     display: block;
   }
+  .thank-you-image{
+    height: auto;
+    width: 100%;
+  }
 }

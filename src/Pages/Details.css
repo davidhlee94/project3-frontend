@@ -261,5 +261,8 @@ span{
     .featured-text{
         text-align: center;
     }
+    .price-panel, .current-price,#nft-price{
+        text-align: center;
+    }
     
 }

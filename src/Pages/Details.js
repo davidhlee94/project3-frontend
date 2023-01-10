@@ -8,10 +8,11 @@ import "react-tooltip/dist/react-tooltip.css";
 import Barchart from "../components/Barchart";
 import Detailscarousel from "../components/Detailscarousel";
 import Review from "../components/Review";
+import Owner from "../components/Owner";
 
 const Details = () => {
   const [nft, setNFT] = useState(null);
-
+    const [ owner, setOwner ] = useState('')
   const { id } = useParams();
 
   async function displayDetails() {
@@ -80,7 +81,7 @@ const Details = () => {
           </div>
           <p className="current-price">Current Price</p>
           <h1 id="nft-price">{nft.price}$</h1>
-          <button className="details-button">BUY NOW</button>
+          <Owner nftID={nft._id} reviewData={nft}/>
         </div>
       </div>
         <div className="artist-accordion">

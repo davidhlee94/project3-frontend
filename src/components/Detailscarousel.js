@@ -27,45 +27,45 @@ function Detailscarousel() {
             </>
         )
     }
-    const responsive = {
-        ultrawideDesktop: {
-          breakpoint: { max: 4000, min: 3600 },
-          centerMode: true,
-          items: 9,
-        },
-        superLargeDesktop: {
-          breakpoint: { max: 3600, min: 3200 },
-          items: 8,
-        },
-        largeDesktop: {
-          breakpoint: { max: 3200, min: 2800 },
-          items: 7,
-        },
-        medDesktop: {
-          breakpoint: { max: 2800, min: 2400 },
-          items: 6,
-        },
-        smallDesktop: {
-          breakpoint: { max: 2400, min: 2000 },
-          items: 5,
-        },
-        xSmallDesktop: {
-          breakpoint: { max: 2000, min: 1600 },
-          items: 4,
-        },
-        tablet: {
-          breakpoint: { max: 1600, min: 1200 },
-          items: 3,
-        },
-        smallTablet: {
-          breakpoint: { max: 1200, min: 800 },
-          items: 2,
-        },
-        mobile: {
-          breakpoint: { max: 800, min: 0 },
-          items: 1,
-        },
-      };
+  const responsive = {
+    ultrawideDesktop: {
+      breakpoint: { max: 4000, min: 3600 },
+      centerMode: true,
+      items: 9,
+    },
+    superLargeDesktop: {
+      breakpoint: { max: 3600, min: 3200 },
+      items: 8,
+    },
+    largeDesktop: {
+      breakpoint: { max: 3200, min: 2800 },
+      items: 7,
+    },
+    medDesktop: {
+      breakpoint: { max: 2800, min: 2400 },
+      items: 6,
+    },
+    smallDesktop: {
+      breakpoint: { max: 2400, min: 2000 },
+      items: 5,
+    },
+    xSmallDesktop: {
+      breakpoint: { max: 2000, min: 1600 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1600, min: 1200 },
+      items: 3,
+    },
+    smallTablet: {
+      breakpoint: { max: 1200, min: 800 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 800, min: 0 },
+      items: 1,
+    },
+  };
   return (
     <div id="nft-similar">
       <h3 className="featured-text">Other Featured NFTs</h3>
@@ -76,7 +76,7 @@ function Detailscarousel() {
         infinite={true}
         
         containerClass="carousel-container"
-        removeArrowOnDeviceType={["tablet", "mobile"]}
+        removeArrowOnDeviceType={["smalltablet", "mobile"]}
         >
             {nft.slice(nft.length - 10).map((last) => {
                 return(

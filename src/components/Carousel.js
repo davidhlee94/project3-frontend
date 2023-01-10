@@ -49,7 +49,7 @@ const HomeCarousel = ({ carouselData }) => {
       responsive={responsive}
       infinite={true}
       containerClass="carousel-container"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
+      removeArrowOnDeviceType={["smallTablet", "mobile"]}
       itemClass="carousel-item-padding-40-px"
     >
       {carouselData !== [] ? (

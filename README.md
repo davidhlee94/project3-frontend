@@ -69,7 +69,7 @@ Here are a few stretch goals we look to accomplish in the future:<br>
 📄 User authentication<br>
 📄 Create NFT Collections<br>
 <br>
-## Built By
+## 🔨 Built By 🔨
 ##### Barezi Morales 
 [GitHub](https://github.com/easybarezi20)
 [LinkedIn](https://www.linkedin.com/in/barezi-morales/)

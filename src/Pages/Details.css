@@ -263,6 +263,7 @@ span{
     }
     .price-panel, .current-price,#nft-price{
         text-align: center;
+        padding-left: 0;
     }
     
 }

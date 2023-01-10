@@ -5,7 +5,7 @@ import "./Review.css";
 
 const Review = ({ reviewData, nftId }) => {
   const [newForm, setNewForm] = useState({
-    rating: "",
+    rating: "5",
     content: "",
     nft: nftId,
   });
@@ -85,6 +85,7 @@ const Review = ({ reviewData, nftId }) => {
     ));
   };
 
+
   const loading = () => {
     <div>Reviews Loading...</div>;
   };
@@ -110,7 +111,6 @@ const Review = ({ reviewData, nftId }) => {
                 step="1"
                 type="range"
                 className="rating rating--nojs"
-                onInput="this.style.setProperty('--value', `${this.valueAsNumber}`)"
               />
             </label>
           </div>

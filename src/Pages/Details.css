@@ -226,6 +226,17 @@ span{
 #favorite:hover{
     color: red;
 }
+
+#favorite-active {
+    color: red;
+    font-size: 25px;
+    width: 2%;
+    margin: 0;
+    margin-left: 5px;
+    margin-bottom: 5px;
+    height: 30px;
+}
+
 .listing-price-labels ,.accordion-body{
     background: #F2FBFF;
 }

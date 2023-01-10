@@ -7,6 +7,7 @@ function Owner({ nftID , reviewData}) {
         nftOwner: "",
     });
     const setOwnerURL = `https://dbl-project-3-backend.herokuapp.com/nft/${nftID}/add-owner`;
+    const testURL = `http://www.localhost:4000/nft/${nftID}/add-owner`
     
     const handleChange = (e) => {
         setNewOwner({ ...newOwner, [e.target.name]: e.target.value })
@@ -25,7 +26,7 @@ function Owner({ nftID , reviewData}) {
     }
     async function createOwnerData(test) {
         try {
-             await fetch(setOwnerURL, {
+             await fetch(testURL, {
                 method: "PUT",
                 headers: {
                     "Content-type": "application/json",
@@ -38,12 +39,12 @@ function Owner({ nftID , reviewData}) {
     }
     
     
-
+    console.log("Current Owner", finalOwnerData)
   return (
     <>
         <div className='current-price'>
             <p>Current Owner</p>
-            {!finalOwnerData ? <h1 className='owner-details'>{reviewData.userName}</h1> : <h1 className='owner-details'>{finalOwnerData}</h1>}
+            {finalOwnerData === "" ? <h1 className='owner-details'>{reviewData.userName}</h1> : <h1 className='owner-details'>{finalOwnerData}</h1>}
         </div>
         <div className="owner-panel">
             <form onSubmit={handleSubmit}>

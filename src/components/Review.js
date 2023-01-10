@@ -20,7 +20,7 @@ const Review = ({ reviewData, nftId }) => {
   const createReviewURL = `https://dbl-project-3-backend.herokuapp.com/nft/${nftId}/add-review`;
 
   async function getReviewData() {
-    console.log("review array", reviewData);
+    // console.log("review array", reviewData);
     let arrayData = [];
     reviewData.forEach(async (id) => {
       try {
@@ -28,7 +28,7 @@ const Review = ({ reviewData, nftId }) => {
           `https://dbl-project-3-backend.herokuapp.com/review/${id}`
         );
         const data = await response.json();
-        console.log("review object", data);
+        // console.log("review object", data);
         arrayData.push(data);
         Promise.all(arrayData).then(
           setTimeout(() => {
@@ -94,7 +94,7 @@ const Review = ({ reviewData, nftId }) => {
     getReviewData();
   }, []);
 
-  console.log("loop complete", finalReviewData);
+  // console.log("loop complete", finalReviewData);
 
   return (
     <div>

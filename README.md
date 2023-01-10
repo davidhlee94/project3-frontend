@@ -3,8 +3,8 @@
 
 
 # 👾 NiFT 👾
-##### By Barezi Moralex, Luigi Bustos, and David Lee
-###### [NiFT Website](link here)
+#### By Barezi Moralex, Luigi Bustos, and David Lee
+#### [NiFT Website](https://nift-bld.netlify.app/)
 
 
 
@@ -71,16 +71,39 @@ Here are a few stretch goals we look to accomplish in the future:<br>
 📄 Create NFT Collections<br>
 <br>
 ## 🔨 Built By 🔨
-##### Barezi Morales 
-[GitHub](https://github.com/easybarezi20)
-[LinkedIn](https://www.linkedin.com/in/barezi-morales/)
+#### Barezi Morales 
+<p>
+    <a href="https://github.com/easybarezi20" rel="nofollow noreferrer">
+    <img width="20" height="auto"src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Github-Dark.svg" alt="github"> Github
+  </a>
+  <br>
+  <a href="https://www.linkedin.com/in/barezi-morales/" rel="nofollow noreferrer">
+    <img width="20" height="auto" src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+  </a>
+<p>
 
-##### David Lee
-[GitHub](https://github.com/davidhlee94)
-[LinkedIn](https://www.linkedin.com/in/iamdavidhanlee/)
+#### David Lee
+<p>
+    <a href="https://github.com/davidhlee94" rel="nofollow noreferrer">
+    <img width="20" height="auto"src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Github-Dark.svg" alt="github"> Github
+  </a>
+  <br>
+  <a href="https://www.linkedin.com/in/iamdavidhanlee" rel="nofollow noreferrer">
+    <img width="20" height="auto" src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+  </a>
+<p>
 
-##### Luigi Bustos
-[GitHub](https://github.com/luigibustos)
-[LinkedIn](https://www.linkedin.com/in/luigibustos/)
+#### Luigi Bustos
+  
+  <p>
+    <a href="https://github.com/luigibustos" rel="nofollow noreferrer">
+    <img width="20" height="auto"src="https://raw.githubusercontent.com/tandpfun/skill-icons/main/icons/Github-Dark.svg" alt="github"> Github
+  </a>
+  <br>
+  <a href="https://www.linkedin.com/in/luigibustos/" rel="nofollow noreferrer">
+    <img width="20" height="auto" src="https://i.stack.imgur.com/gVE0j.png" alt="linkedin"> LinkedIn
+  </a>
+<p>
+
 ## 🙏 Thank you for reading! 🙏
 

@@ -4,7 +4,8 @@
 
 # 👾 NiFT 👾
 #### By Barezi Morales, Luigi Bustos, and David Lee
-#### [NiFT Website](https://nift-bld.netlify.app/)
+#### [NiFT Live Site](https://nift-bld.netlify.app/)
+#### [NiFT Github Backend](https://github.com/davidhlee94/project3-backend)
 
 
 

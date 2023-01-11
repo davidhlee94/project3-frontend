@@ -59,7 +59,6 @@ const Create = () => {
       price: "",
       description: "",
     });
-    console.log("submitted");
   };
 
   const loaded = () => {

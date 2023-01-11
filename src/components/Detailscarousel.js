@@ -1,32 +1,32 @@
-import React from 'react'
+import React from "react";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import Spinner from 'react-bootstrap/Spinner';
-import { useState, useEffect } from 'react';
-import './Detailscarousel.css'
-
-
+import Spinner from "react-bootstrap/Spinner";
+import { useState, useEffect } from "react";
+import "./Detailscarousel.css";
 
 function Detailscarousel() {
-    const [ nft, setNFT ] = useState(null)
+  const [nft, setNFT] = useState(null);
 
-     async function displayDetails() {
-        const response = await fetch(`https://dbl-project-3-backend.herokuapp.com/nft`)
-        const data = await response.json()
-        setNFT(data)
-    }
-    useEffect(() => {
-        displayDetails()
-    },[])
-    if(!nft){
-        return (
-            <>
-            <Spinner animation="border" role="status">
-                <span className="visually-hidden">Loading...</span>
-            </Spinner>
-            </>
-        )
-    }
+  async function displayDetails() {
+    const response = await fetch(
+      `https://dbl-project-3-backend.herokuapp.com/nft`
+    );
+    const data = await response.json();
+    setNFT(data);
+  }
+  useEffect(() => {
+    displayDetails();
+  }, []);
+  if (!nft) {
+    return (
+      <>
+        <Spinner animation="border" role="status">
+          <span className="visually-hidden">Loading...</span>
+        </Spinner>
+      </>
+    );
+  }
   const responsive = {
     ultrawideDesktop: {
       breakpoint: { max: 4000, min: 3600 },
@@ -69,37 +69,41 @@ function Detailscarousel() {
   return (
     <div id="nft-similar">
       <h3 className="featured-text">Other Featured NFTs</h3>
-        <Carousel 
+      <Carousel
         autoPlay={true}
         autoPlaySpeed={3000}
         responsive={responsive}
         infinite={true}
-        
         containerClass="carousel-container"
         removeArrowOnDeviceType={["smalltablet", "mobile"]}
-        >
-            {nft.slice(nft.length - 10).map((last) => {
-                return(
-                    <a href={`/nft/${last._id}`} key= {last._id}className='carousel-card' id='link'>
-                    <div  
-                        className='carousel-card'
-                        style={{
-                            backgroundImage: `url(${last.image})`,
-                          }}
-                    >
-                        <div className='carousel-card-text'>
-                            <p><span className='nft-c'>{last.assetName}</span></p>
-                            <p>{last.price}$</p>
-                        </div>
-                    </div>
-                    </a>
-                )
-            })} 
-        </Carousel>
-
+      >
+        {nft.slice(nft.length - 10).map((last) => {
+          return (
+            <a
+              href={`/nft/${last._id}`}
+              key={last._id}
+              className="carousel-card"
+              id="link"
+            >
+              <div
+                className="carousel-card"
+                style={{
+                  backgroundImage: `url(${last.image})`,
+                }}
+              >
+                <div className="carousel-card-text">
+                  <p>
+                    <span className="nft-c">{last.assetName}</span>
+                  </p>
+                  <p>{last.price}$</p>
+                </div>
+              </div>
+            </a>
+          );
+        })}
+      </Carousel>
     </div>
-    
-  )
+  );
 }
 
-export default Detailscarousel
+export default Detailscarousel;

@@ -3,7 +3,7 @@
 
 
 # 👾 NiFT 👾
-#### By Barezi Moralex, Luigi Bustos, and David Lee
+#### By Barezi Morales, Luigi Bustos, and David Lee
 #### [NiFT Website](https://nift-bld.netlify.app/)
 
 

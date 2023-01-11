@@ -202,29 +202,32 @@
   background-color: #0064bd;
   box-shadow: none;
 }
-@media only screen and (max-width: 850px){
-  .form-container{
+@media only screen and (max-width: 850px) {
+  .form-container {
     padding: px;
   }
-  .username-container, .input-title,
-   .assetName-container, .image-container, 
-   .price-container, .description-container{
+  .username-container,
+  .input-title,
+  .assetName-container,
+  .image-container,
+  .price-container,
+  .description-container {
     padding: 0;
     margin: 0;
     width: 100%;
     text-align: center;
     display: block;
   }
-  .input-field{
+  .input-field {
     text-align: left;
   }
-  .images-displayed{
+  .images-displayed {
     text-align: center;
   }
-  .create-title{
+  .create-title {
     padding-top: 50px;
   }
-  .nft-image{
+  .nft-image {
     height: auto;
     width: 100%;
   }

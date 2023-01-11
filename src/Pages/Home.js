@@ -28,7 +28,6 @@ const Home = () => {
           <HomeCarousel carouselData={homeData} />
         </Container>
         <HomeTable tableData={homeData} />
-        {/* <Footer /> */}
       </Container>
     );
   };

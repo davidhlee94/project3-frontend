@@ -1,10 +1,5 @@
-<<<<<<< HEAD
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "./Owner.css";
-=======
-import React, { useState } from 'react'
-import './Owner.css'
->>>>>>> a272e0cab940a740fd30c29ec652031a7b3c9c06
 
 function Owner({ nftID, reviewData }) {
   const [finalOwnerData, setFinalOwnerData] = useState(reviewData.nftOwner);

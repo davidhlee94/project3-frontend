@@ -65,7 +65,6 @@ const Review = ({ reviewData, nftId }) => {
       rating: "",
       content: "",
     });
-    console.log("submitted");
   };
 
   const loaded = () => {

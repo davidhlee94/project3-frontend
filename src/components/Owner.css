@@ -10,5 +10,7 @@
     input{
         text-align: center;
     }
-    
+    .details-button{
+        width: auto;
+    }
 }

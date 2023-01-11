@@ -151,3 +151,19 @@
 .click-anywhere {
   padding-top: 10px;
 }
+
+@media only screen and (max-width: 850px){
+  .review-description-text,
+  .user-rating-text {
+    font-weight: 600;
+    width: 100%;
+    height: 3vh;
+  }
+  .user-rating, .review-description{
+    display: block;
+  }
+  .thank-you-image{
+    height: auto;
+    width: 100%;
+  }
+}

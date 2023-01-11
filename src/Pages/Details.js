@@ -14,7 +14,6 @@ const Details = () => {
   const [nft, setNFT] = useState(null);
   const [favorite, setFavorite] = useState(false);
 
-  const [owner, setOwner] = useState("");
   const { id } = useParams();
 
   async function displayDetails() {

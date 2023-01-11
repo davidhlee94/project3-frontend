@@ -72,7 +72,7 @@ const Review = ({ reviewData, nftId }) => {
     return finalReviewData.map((data) => (
       <div key={data._id} className="each-review">
         <div className="user-rating">
-          <p className="user-rating-text">User Rating:</p>
+          <h6 className="user-rating-text">User Rating:</h6>
           <p className="user-rating-text-2">{data.rating}/5 Stars</p>
         </div>
         <div className="review-description">
@@ -115,7 +115,7 @@ const Review = ({ reviewData, nftId }) => {
               type="text"
               value={newForm.content}
               name="content"
-              placeholder="Review"
+              placeholder="Type here..."
               onChange={handleChange}
               className="review-input-field"
             />

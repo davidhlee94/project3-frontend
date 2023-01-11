@@ -27,7 +27,6 @@ const Details = () => {
     displayDetails();
   }, []);
 
-  console.log(nft);
   if (!nft) {
     return (
       <>

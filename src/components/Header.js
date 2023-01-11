@@ -33,14 +33,10 @@ function Header() {
           <span className="navbar-brand-text">NiFT</span>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
-        <Navbar.Collapse
-          className="navbar-collapse"
-          // id="basic-navbar-nav"
-        >
+        <Navbar.Collapse className="navbar-collapse">
           <Nav className="nav">
             <Nav.Link href="/">Home</Nav.Link>
             <Nav.Link href="/create">Create</Nav.Link>
-            <Nav.Link href="/">About</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>

@@ -57,7 +57,6 @@
   margin-block-end: 1rem;
 }
 
-
 .rating--nojs::-moz-range-track {
   background: var(--fillbg);
 }

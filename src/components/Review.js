@@ -65,7 +65,6 @@ const Review = ({ reviewData, nftId }) => {
       rating: "",
       content: "",
     });
-    console.log("submitted");
   };
 
   const loaded = () => {
@@ -82,7 +81,6 @@ const Review = ({ reviewData, nftId }) => {
       </div>
     ));
   };
-
 
   const loading = () => {
     <div>Reviews Loading...</div>;
